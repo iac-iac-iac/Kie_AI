@@ -56,12 +56,13 @@ export function ChatComposer({
   return (
     <div className="glass-panel rounded-2xl border border-[var(--glass-border)] p-4">
       {model?.supports_tools && (
-        <div className="mb-3">
+        <div className="mb-3 space-y-1.5">
           <Switch
             checked={toolsEnabled}
             onChange={onToolsEnabledChange}
             label={t("chats.tools")}
           />
+          <p className="pl-14 text-xs leading-relaxed text-muted">{t("chats.toolsHint")}</p>
         </div>
       )}
 

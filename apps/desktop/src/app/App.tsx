@@ -13,6 +13,7 @@ import { InterfaceTab } from "../features/settings/InterfaceTab";
 import { ShortcutsTab } from "../features/settings/ShortcutsTab";
 import { DiagnosticsTab } from "../features/settings/DiagnosticsTab";
 import { BackupTab } from "../features/settings/BackupTab";
+import { ModelCatalogPage } from "../features/models/ModelCatalogPage";
 import { api } from "../lib/api";
 import { getSidecarUrl } from "../lib/sidecar";
 import { applyTheme } from "../lib/theme";
@@ -63,6 +64,7 @@ export function App() {
             <Route path="images" element={<ImagesPage />} />
             <Route path="video" element={<VideoPage />} />
             <Route path="audio" element={<AudioPage />} />
+            <Route path="models/:category" element={<ModelCatalogPage />} />
             <Route path="settings" element={<SettingsLayout />}>
               <Route index element={<Navigate to="general" replace />} />
               <Route path="general" element={<GeneralTab />} />

@@ -19,6 +19,9 @@
   --status-ok: #5b9fd4;
   --status-warn: #fbbf24;
   --status-error: #f87171;
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(255, 255, 255, 0.14);
+  --scrollbar-thumb-hover: rgba(74, 111, 165, 0.55);
 }
 
 :root[data-theme="light"] {
@@ -39,10 +42,15 @@
   --status-ok: #2d6a9f;
   --status-warn: #d97706;
   --status-error: #dc2626;
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: rgba(0, 0, 0, 0.18);
+  --scrollbar-thumb-hover: rgba(61, 95, 140, 0.45);
 }
 
 * {
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 html,
@@ -188,4 +196,33 @@ body {
 .nav-link-inactive:hover {
   background: var(--hover-bg);
   color: var(--text-primary);
+}
+
+/* Custom scrollbar — WebView2 / Chromium */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--accent);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
 }

@@ -35,6 +35,18 @@
     "addFavorite": "Add to favorites",
     "removeFavorite": "Remove from favorites",
     "priceUpdated": "Price updated: {{date}}",
+    "catalog": {
+      "titleImage": "Image models",
+      "titleVideo": "Video models",
+      "titleAudio": "Audio models",
+      "subtitle": "Sorted by price. Click a card to select a model.",
+      "chooseModel": "Choose model",
+      "back": "Back",
+      "loading": "Loading catalog…",
+      "error": "Failed to load model catalog.",
+      "retry": "Retry",
+      "count": "{{count}} models"
+    },
     "capability": {
       "textToImage": "text to image",
       "imageToImage": "image to image",
@@ -207,6 +219,7 @@
     "tokensOut": "out: {{count}}",
     "creditsUsed": "−{{credits}} cr.",
     "tools": "Tools",
+    "toolsHint": "Lets the model call built-in API functions (function calling), e.g. current time. Only available on supported models.",
     "attachImage": "Image",
     "removeImage": "Remove",
     "uploading": "Uploading…",

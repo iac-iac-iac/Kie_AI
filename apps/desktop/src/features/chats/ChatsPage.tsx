@@ -224,7 +224,7 @@ export function ChatsPage() {
         )}
 
         {!activeChat ? (
-          <div className="flex flex-1 flex-col items-center justify-center gap-6 p-8">
+          <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-6">
             <div className="text-center">
               <h2 className="text-accent text-xl font-semibold">{t("chats.welcomeTitle")}</h2>
               <p className="mt-2 text-sm text-muted">{t("chats.welcomeHint")}</p>
@@ -238,20 +238,22 @@ export function ChatsPage() {
               />
             )}
             {!hasApiKey && (
-              <p className="max-w-md text-center text-sm text-muted">
+              <p className="mx-auto max-w-md text-center text-sm text-muted">
                 {t(apiLockMessageKey(lockReason))}{" "}
                 <Link to="/settings" className="text-accent underline-offset-2 hover:underline">
                   {t("apiKey.goToSettings")}
                 </Link>
               </p>
             )}
-            <Button
-              type="button"
-              disabled={!canCreateChat}
-              onClick={() => void handleNewChat()}
-            >
-              {createChat.isPending ? t("chats.creating") : t("chats.newChat")}
-            </Button>
+            <div className="sticky bottom-0 flex justify-center border-t border-[var(--glass-border)] bg-[var(--bg-primary)]/80 py-4 backdrop-blur-sm">
+              <Button
+                type="button"
+                disabled={!canCreateChat}
+                onClick={() => void handleNewChat()}
+              >
+                {createChat.isPending ? t("chats.creating") : t("chats.newChat")}
+              </Button>
+            </div>
           </div>
         ) : (
           <>

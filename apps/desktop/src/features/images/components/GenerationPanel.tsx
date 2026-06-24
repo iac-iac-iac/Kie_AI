@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import { CostEstimateBar } from "../../../components/generation/CostEstimateBar";
 import { ApiKeyLockOverlay } from "../../../components/ui/ApiKeyLockOverlay";
 import { Button } from "../../../components/ui/Button";
-import { ModelSelectDropdown } from "../../../components/ui/ModelSelectDropdown";
+import { SelectedModelField } from "../../../components/models/SelectedModelField";
+import { useModelIdFromNavigation } from "../../../hooks/useModelIdFromNavigation";
 import { api, ApiError } from "../../../lib/api";
 import { mapApiError } from "../../../lib/apiErrors";
 import type { GenerationDraft } from "../../../lib/generationDraft";
@@ -58,6 +59,8 @@ export function GenerationPanel({
       setModelId(models[0].id);
     }
   }, [models, modelId]);
+
+  useModelIdFromNavigation(models, setModelId);
 
   useEffect(() => {
     if (!draft) return;
@@ -136,11 +139,11 @@ export function GenerationPanel({
       {!hasApiKey && <ApiKeyLockOverlay messageKey={lockMessageKey} />}
       <div className="flex min-h-0 flex-1 flex-col">
         <div className="flex-1 space-y-4 overflow-y-auto p-4">
-        <ModelSelectDropdown
+        <SelectedModelField
           label={t("images.model")}
+          category="image"
           models={models}
           value={modelId}
-          onChange={setModelId}
           disabled={!hasApiKey}
         />
 
