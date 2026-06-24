@@ -10,6 +10,7 @@ const tabs = [
   { to: "shortcuts", key: "shortcuts" },
   { to: "diagnostics", key: "diagnostics" },
   { to: "backup", key: "backup" },
+  { to: "credits", key: "credits" },
 ] as const;
 
 export function SettingsLayout() {

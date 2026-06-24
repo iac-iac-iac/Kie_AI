@@ -123,8 +123,18 @@
       "interface": "Interface",
       "shortcuts": "Shortcuts",
       "diagnostics": "Diagnostics",
-      "backup": "Backup"
+      "backup": "Backup",
+      "credits": "Credits"
     }
+  },
+  "credits": {
+    "title": "Credits",
+    "description": "Kie AI Desktop — open-source client for kie.ai.",
+    "author": "Author",
+    "email": "Contact",
+    "repository": "Source code",
+    "stack": "Built with",
+    "stackBody": "Tauri 2, React, TypeScript, Python (FastAPI), SQLite. API by kie.ai."
   },
   "shortcuts": {
     "hint": "Keyboard shortcuts work inside the app window.",

@@ -123,8 +123,18 @@
       "interface": "Интерфейс",
       "shortcuts": "Горячие клавиши",
       "diagnostics": "Диагностика",
-      "backup": "Резервные копии"
+      "backup": "Резервные копии",
+      "credits": "Авторы"
     }
+  },
+  "credits": {
+    "title": "Авторы",
+    "description": "Kie AI Desktop — открытый клиент для kie.ai.",
+    "author": "Автор",
+    "email": "Контакты",
+    "repository": "Исходный код",
+    "stack": "Технологии",
+    "stackBody": "Tauri 2, React, TypeScript, Python (FastAPI), SQLite. API — kie.ai."
   },
   "shortcuts": {
     "hint": "Горячие клавиши работают в окне приложения.",

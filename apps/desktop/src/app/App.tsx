@@ -13,6 +13,7 @@ import { InterfaceTab } from "../features/settings/InterfaceTab";
 import { ShortcutsTab } from "../features/settings/ShortcutsTab";
 import { DiagnosticsTab } from "../features/settings/DiagnosticsTab";
 import { BackupTab } from "../features/settings/BackupTab";
+import { CreditsTab } from "../features/settings/CreditsTab";
 import { ModelCatalogPage } from "../features/models/ModelCatalogPage";
 import { api } from "../lib/api";
 import { getSidecarUrl } from "../lib/sidecar";
@@ -72,6 +73,7 @@ export function App() {
               <Route path="shortcuts" element={<ShortcutsTab />} />
               <Route path="diagnostics" element={<DiagnosticsTab />} />
               <Route path="backup" element={<BackupTab />} />
+              <Route path="credits" element={<CreditsTab />} />
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>

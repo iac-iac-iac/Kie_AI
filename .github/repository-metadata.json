@@ -1,0 +1,25 @@
+{
+  "description": "Native Windows desktop client for kie.ai — AI chats, image, video & audio generation. Tauri + React + Python.",
+  "homepage": "https://github.com/iac-iac-iac/Kie_AI",
+  "topics": [
+    "tauri",
+    "tauri-app",
+    "rust",
+    "react",
+    "typescript",
+    "python",
+    "fastapi",
+    "desktop-app",
+    "windows",
+    "windows-11",
+    "ai",
+    "kie-ai",
+    "image-generation",
+    "video-generation",
+    "audio-generation",
+    "chatbot",
+    "open-source",
+    "sqlite",
+    "pyinstaller"
+  ]
+}
