@@ -101,9 +101,18 @@ pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
 
     tauri::async_runtime::spawn(async move {
         while let Some(event) = rx.recv().await {
-            if let CommandEvent::Error(err) = event {
-                eprintln!("sidecar error: {err}");
-                break;
+            match event {
+                CommandEvent::Error(err) => {
+                    eprintln!("sidecar error: {err}");
+                    break;
+                }
+                CommandEvent::Stdout(line) => {
+                    eprintln!("sidecar: {}", String::from_utf8_lossy(&line));
+                }
+                CommandEvent::Stderr(line) => {
+                    eprintln!("sidecar stderr: {}", String::from_utf8_lossy(&line));
+                }
+                _ => {}
             }
         }
     });

@@ -4,7 +4,9 @@
     "startingSidecar": "Starting service…",
     "startingSidecarHint": "First launch may take 1–2 minutes. Please keep the window open.",
     "sidecarTimeout": "Service failed to start",
-    "sidecarTimeoutHint": "Restart the app. If it keeps failing, reinstall from the latest release."
+    "sidecarTimeoutHint": "Restart the app. If it keeps failing, reinstall from the latest release.",
+    "retrySidecar": "Retry startup",
+    "restartingSidecar": "Restarting service…"
   },
   "window": {
     "minimize": "Minimize",

@@ -1,13 +1,9 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-import os
 from pathlib import Path
 
 block_cipher = None
 root = Path(SPECPATH)
-
-# Reuse extracted bundle between runs (faster cold start after first launch).
-runtime_tmpdir = os.path.join(os.environ.get("LOCALAPPDATA", "."), "KieAI", "sidecar", "_internal")
 
 a = Analysis(
     [str(root / "kie_sidecar" / "__main__.py")],
@@ -58,7 +54,7 @@ exe = EXE(
     strip=False,
     upx=True,
     upx_exclude=[],
-    runtime_tmpdir=runtime_tmpdir,
+    runtime_tmpdir=None,
     console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,

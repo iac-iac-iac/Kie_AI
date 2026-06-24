@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { invoke } from "@tauri-apps/api/core";
 import { getSidecarUrl } from "../lib/sidecar";
 
 const POLL_MS = 500;
@@ -7,6 +8,8 @@ const TIMEOUT_MS = 120_000;
 export function useSidecarReady() {
   const [ready, setReady] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
+  const [retrying, setRetrying] = useState(false);
+  const [attempt, setAttempt] = useState(0);
 
   useEffect(() => {
     let cancelled = false;
@@ -23,16 +26,18 @@ export function useSidecarReady() {
             if (!cancelled) {
               setReady(true);
               setTimedOut(false);
+              setRetrying(false);
             }
             return;
           }
         } catch {
-          // sidecar still starting (PyInstaller onefile extract on first launch)
+          // sidecar still starting
         }
         await new Promise((resolve) => setTimeout(resolve, POLL_MS));
       }
       if (!cancelled) {
         setTimedOut(true);
+        setRetrying(false);
       }
     };
 
@@ -40,11 +45,26 @@ export function useSidecarReady() {
     return () => {
       cancelled = true;
     };
+  }, [attempt]);
+
+  const retry = useCallback(async () => {
+    setRetrying(true);
+    setTimedOut(false);
+    setReady(false);
+    try {
+      const sidecarUrl = await getSidecarUrl();
+      await invoke("restart_sidecar", { sidecarUrl });
+    } catch {
+      // still try polling
+    }
+    setAttempt((n) => n + 1);
   }, []);
 
   return {
     ready,
-    starting: !ready && !timedOut,
+    starting: !ready && !timedOut && !retrying,
     timedOut,
+    retrying,
+    retry,
   };
 }

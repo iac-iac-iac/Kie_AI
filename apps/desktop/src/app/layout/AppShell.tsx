@@ -11,6 +11,7 @@ import { ThemeToggle } from "../../components/ui/ThemeToggle";
 import { useHotkeys } from "../../hooks/useHotkeys";
 import { useSidecarEvents } from "../../hooks/useSidecarEvents";
 import { useSidecarReady } from "../../hooks/useSidecarReady";
+import { Button } from "../../components/ui/Button";
 import { cn } from "../../lib/utils";
 
 const tabs = [
@@ -24,7 +25,7 @@ const tabs = [
 export function AppShell() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { ready: sidecarReady, starting: sidecarStarting, timedOut: sidecarTimedOut } =
+  const { ready: sidecarReady, starting: sidecarStarting, timedOut: sidecarTimedOut, retrying: sidecarRetrying, retry: retrySidecar } =
     useSidecarReady();
 
   useSidecarEvents();
@@ -41,18 +42,28 @@ export function AppShell() {
     <div className="flex h-full flex-col">
       <CustomTitleBar />
 
-      {(sidecarStarting || sidecarTimedOut) && (
+      {(sidecarStarting || sidecarTimedOut || sidecarRetrying) && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-primary)]/90 backdrop-blur-sm">
           <div className="glass-panel max-w-md rounded-2xl border border-[var(--glass-border)] p-8 text-center">
-            {sidecarStarting ? (
+            {sidecarStarting || sidecarRetrying ? (
               <>
-                <p className="text-lg font-medium text-primary">{t("app.startingSidecar")}</p>
+                <p className="text-lg font-medium text-primary">
+                  {sidecarRetrying ? t("app.restartingSidecar") : t("app.startingSidecar")}
+                </p>
                 <p className="mt-2 text-sm text-muted">{t("app.startingSidecarHint")}</p>
               </>
             ) : (
               <>
                 <p className="text-lg font-medium text-status-error">{t("app.sidecarTimeout")}</p>
                 <p className="mt-2 text-sm text-muted">{t("app.sidecarTimeoutHint")}</p>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="mt-4"
+                  onClick={() => void retrySidecar()}
+                >
+                  {t("app.retrySidecar")}
+                </Button>
               </>
             )}
           </div>

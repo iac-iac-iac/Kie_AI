@@ -76,7 +76,8 @@ fn stop_sidecar() -> Result<(), String> {
 
 #[tauri::command]
 fn restart_sidecar(app: tauri::AppHandle, sidecar_url: Option<String>) -> Result<(), String> {
-    let _ = sidecar::ensure_sidecar_started(&app);
+    let _ = sidecar::stop_sidecar();
+    sidecar::ensure_sidecar_started(&app)?;
     let Some(key) = keyring_store::get_api_key()? else {
         return Ok(());
     };
