@@ -4,6 +4,7 @@ import { GenerationProgressSteps } from "../../../components/generation/Generati
 import { Button } from "../../../components/ui/Button";
 import type { GenerationRecord } from "../../../lib/api";
 import { api } from "../../../lib/api";
+import { sidecarFetch } from "../../../lib/sidecarFetch";
 import { revealGenerationInExplorer } from "../../../lib/revealInExplorer";
 import { audioDisplayTitle } from "../lib/display";
 
@@ -36,7 +37,7 @@ export function AudioPlayer({
       if (cancelled) return;
       if (isTextOutput(generation)) {
         try {
-          const response = await fetch(url);
+          const response = await sidecarFetch(url);
           const text = await response.text();
           if (!cancelled) {
             setTextContent(text);

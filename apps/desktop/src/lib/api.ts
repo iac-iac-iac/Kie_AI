@@ -1,4 +1,5 @@
 import { getSidecarUrl } from "./sidecar";
+import { sidecarFetch } from "./sidecarFetch";
 import { consumeSseStream, type StreamHandler } from "./sse";
 
 export class ApiError extends Error {
@@ -13,7 +14,7 @@ export class ApiError extends Error {
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const base = await getSidecarUrl();
-  const response = await fetch(`${base}${path}`, {
+  const response = await sidecarFetch(`${base}${path}`, {
     ...init,
     headers: {
       "Content-Type": "application/json",
@@ -270,7 +271,7 @@ export const api = {
 
   async exportChat(chatId: string): Promise<Blob> {
     const base = await getSidecarUrl();
-    const response = await fetch(`${base}/api/v1/chats/${chatId}/export`);
+    const response = await sidecarFetch(`${base}/api/v1/chats/${chatId}/export`);
     if (!response.ok) {
       let detail = response.statusText;
       try {
@@ -305,7 +306,7 @@ export const api = {
       message_id: messageId,
       tools_enabled: String(options?.toolsEnabled ?? false),
     });
-    const response = await fetch(
+    const response = await sidecarFetch(
       `${base}/api/v1/chats/${chatId}/stream?${params}`,
       { signal: options?.signal },
     );
@@ -326,7 +327,7 @@ export const api = {
     const base = await getSidecarUrl();
     const form = new FormData();
     form.append("file", file);
-    const response = await fetch(`${base}/api/v1/chats/upload`, {
+    const response = await sidecarFetch(`${base}/api/v1/chats/upload`, {
       method: "POST",
       body: form,
     });

@@ -1,3 +1,4 @@
+use std::io::Write;
 use std::path::PathBuf;
 use std::time::{Duration, Instant};
 
@@ -30,7 +31,20 @@ pub fn data_dir() -> PathBuf {
         })
 }
 
-fn sidecar_is_healthy(url: &str) -> bool {
+pub fn append_desktop_log(line: &str) {
+    let dir = data_dir().join("logs");
+    let _ = std::fs::create_dir_all(&dir);
+    let path = dir.join("desktop.log");
+    if let Ok(mut file) = std::fs::OpenOptions::new()
+        .create(true)
+        .append(true)
+        .open(path)
+    {
+        let _ = writeln!(file, "{line}");
+    }
+}
+
+pub fn is_sidecar_healthy(url: &str) -> bool {
     let client = match http_client() {
         Ok(client) => client,
         Err(_) => return false,
@@ -63,7 +77,7 @@ fn sidecar_ready_timeout() -> Duration {
 fn wait_for_sidecar_healthy(url: &str) -> bool {
     let deadline = Instant::now() + sidecar_ready_timeout();
     while Instant::now() < deadline {
-        if sidecar_is_healthy(url) {
+        if is_sidecar_healthy(url) {
             return true;
         }
         std::thread::sleep(Duration::from_millis(500));
@@ -73,7 +87,7 @@ fn wait_for_sidecar_healthy(url: &str) -> bool {
 
 pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
     let url = sidecar_url();
-    if sidecar_is_healthy(&url) {
+    if is_sidecar_healthy(&url) {
         return Ok(());
     }
 
@@ -89,6 +103,9 @@ pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
         .map_err(|e| format!("Failed to resolve sidecar binary: {e}"))?;
 
     let data = data_dir();
+    let _ = std::fs::create_dir_all(data.join("logs"));
+    append_desktop_log(&format!("Spawning sidecar at {url}, data_dir={}", data.display()));
+
     let (mut rx, child) = sidecar
         .env("KIE_DATA_DIR", data.to_string_lossy().to_string())
         .env("KIE_PORT", DEFAULT_PORT.to_string())
@@ -103,14 +120,20 @@ pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
         while let Some(event) = rx.recv().await {
             match event {
                 CommandEvent::Error(err) => {
-                    eprintln!("sidecar error: {err}");
+                    let msg = format!("sidecar error: {err}");
+                    append_desktop_log(&msg);
+                    eprintln!("{msg}");
                     break;
                 }
                 CommandEvent::Stdout(line) => {
-                    eprintln!("sidecar: {}", String::from_utf8_lossy(&line));
+                    let msg = format!("sidecar: {}", String::from_utf8_lossy(&line));
+                    append_desktop_log(&msg);
+                    eprintln!("{msg}");
                 }
                 CommandEvent::Stderr(line) => {
-                    eprintln!("sidecar stderr: {}", String::from_utf8_lossy(&line));
+                    let msg = format!("sidecar stderr: {}", String::from_utf8_lossy(&line));
+                    append_desktop_log(&msg);
+                    eprintln!("{msg}");
                 }
                 _ => {}
             }
@@ -118,10 +141,13 @@ pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
     });
 
     if wait_for_sidecar_healthy(&url) {
+        append_desktop_log(&format!("Sidecar ready at {url}"));
         return Ok(());
     }
 
-    Err(format!("Sidecar did not become ready at {url}"))
+    let err = format!("Sidecar did not become ready at {url}");
+    append_desktop_log(&err);
+    Err(err)
 }
 
 pub fn reload_sidecar_api_key_at(api_key: &str, base_url: &str) -> Result<(), String> {

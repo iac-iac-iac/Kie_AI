@@ -87,9 +87,18 @@ fn restart_sidecar(app: tauri::AppHandle, sidecar_url: Option<String>) -> Result
     sidecar::reload_sidecar_api_key_at(&key, &url)
 }
 
+#[tauri::command]
+fn check_sidecar_health(sidecar_url: Option<String>) -> bool {
+    let url = sidecar_url
+        .filter(|u| !u.trim().is_empty())
+        .unwrap_or_else(|| sidecar::sidecar_url());
+    sidecar::is_sidecar_healthy(&url)
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_http::init())
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_opener::init())
@@ -98,6 +107,10 @@ pub fn run() {
         .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_process::init())
         .setup(|app| {
+            let version = app.package_info().version.to_string();
+            let _ = std::fs::create_dir_all(sidecar::data_dir().join("logs"));
+            sidecar::append_desktop_log(&format!("Kie AI Desktop v{version} starting"));
+
             let handle = app.handle().clone();
             tauri::async_runtime::spawn(async move {
                 let result = tauri::async_runtime::spawn_blocking(move || {
@@ -105,6 +118,7 @@ pub fn run() {
                 })
                 .await;
                 if let Ok(Err(err)) = result {
+                    sidecar::append_desktop_log(&format!("sidecar start warning: {err}"));
                     eprintln!("sidecar start warning: {err}");
                 }
             });
@@ -121,6 +135,7 @@ pub fn run() {
             import_backup,
             stop_sidecar,
             restart_sidecar,
+            check_sidecar_health,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

@@ -1,4 +1,5 @@
 import type { GenerationRecord } from "./api";
+import { sidecarFetch } from "./sidecarFetch";
 
 export type SidecarEventType =
   | "generation.updated"
@@ -86,7 +87,7 @@ export function connectSidecarEvents(
   const run = async () => {
     while (!cancelled && !signal?.aborted) {
       try {
-        const response = await fetch(`${baseUrl}/api/v1/events`, {
+        const response = await sidecarFetch(`${baseUrl}/api/v1/events`, {
           signal,
           headers: { Accept: "text/event-stream" },
         });

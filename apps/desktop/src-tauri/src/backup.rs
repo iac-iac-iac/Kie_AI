@@ -71,8 +71,7 @@ fn add_dir_to_zip(
             zip.start_file(format!("media/{zip_path}"), options)
                 .map_err(|e| e.to_string())?;
             let mut buffer = Vec::new();
-            file.read_to_end(&mut buffer)
-                .map_err(|e| e.to_string())?;
+            file.read_to_end(&mut buffer).map_err(|e| e.to_string())?;
             zip.write_all(&buffer).map_err(|e| e.to_string())?;
         }
     }
@@ -115,8 +114,7 @@ pub fn export_backup(
         db_schema_version: DB_SCHEMA_VERSION,
         includes_media: include_media,
     };
-    let manifest_json =
-        serde_json::to_string_pretty(&manifest).map_err(|e| e.to_string())?;
+    let manifest_json = serde_json::to_string_pretty(&manifest).map_err(|e| e.to_string())?;
     zip.start_file("manifest.json", options)
         .map_err(|e| e.to_string())?;
     zip.write_all(manifest_json.as_bytes())

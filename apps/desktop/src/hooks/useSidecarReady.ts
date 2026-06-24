@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import { invoke } from "@tauri-apps/api/core";
+import { invoke, isTauri } from "@tauri-apps/api/core";
 import { getSidecarUrl } from "../lib/sidecar";
+import { sidecarFetch } from "../lib/sidecarFetch";
 
 const POLL_MS = 500;
 const TIMEOUT_MS = 120_000;
@@ -18,17 +19,31 @@ export function useSidecarReady() {
       const deadline = Date.now() + TIMEOUT_MS;
       while (!cancelled && Date.now() < deadline) {
         try {
-          const base = await getSidecarUrl();
-          const response = await fetch(`${base}/health`, {
-            signal: AbortSignal.timeout(3_000),
-          });
-          if (response.ok) {
-            if (!cancelled) {
-              setReady(true);
-              setTimedOut(false);
-              setRetrying(false);
+          if (isTauri()) {
+            const ok = await invoke<boolean>("check_sidecar_health", {
+              sidecarUrl: null,
+            });
+            if (ok) {
+              if (!cancelled) {
+                setReady(true);
+                setTimedOut(false);
+                setRetrying(false);
+              }
+              return;
             }
-            return;
+          } else {
+            const base = await getSidecarUrl();
+            const response = await sidecarFetch(`${base}/health`, {
+              signal: AbortSignal.timeout(3_000),
+            });
+            if (response.ok) {
+              if (!cancelled) {
+                setReady(true);
+                setTimedOut(false);
+                setRetrying(false);
+              }
+              return;
+            }
           }
         } catch {
           // sidecar still starting
