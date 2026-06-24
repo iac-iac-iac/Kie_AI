@@ -1,0 +1,20 @@
+{
+  "id": "suno/generate-sounds",
+  "category": "audio",
+  "display_name": "Suno Generate Sounds",
+  "api_type": "suno",
+  "operation": "generate_sounds",
+  "model_field": "",
+  "output_kind": "audio",
+  "price_hint": "~30 кр.",
+  "estimate_credits": 30,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/quickstart"
+}

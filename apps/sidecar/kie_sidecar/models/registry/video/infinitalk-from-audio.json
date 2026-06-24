@@ -1,0 +1,29 @@
+{
+  "id": "infinitalk/from-audio",
+  "category": "video",
+  "display_name": "Infinitalk - From Audio",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "infinitalk/from-audio",
+  "price_hint": "~120 кр.",
+  "estimate_credits": 120,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": false,
+      "max_length": 2000
+    },
+    {
+      "name": "image_url",
+      "type": "image_url",
+      "required": true
+    },
+    {
+      "name": "audio_url",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/infinitalk/from-audio.md"
+}

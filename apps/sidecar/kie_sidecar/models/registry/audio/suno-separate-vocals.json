@@ -1,0 +1,34 @@
+{
+  "id": "suno/separate-vocals",
+  "category": "audio",
+  "display_name": "Suno Separate Vocals",
+  "api_type": "suno",
+  "operation": "separate_vocals",
+  "model_field": "",
+  "output_kind": "audio",
+  "price_hint": "~40 кр.",
+  "estimate_credits": 40,
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "audio_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "type",
+      "type": "select",
+      "required": false,
+      "default": "separate_vocal",
+      "options": [
+        "separate_vocal",
+        "split_stem"
+      ]
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/separate-vocals"
+}

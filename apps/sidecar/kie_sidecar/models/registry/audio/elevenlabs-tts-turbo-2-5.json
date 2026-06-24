@@ -1,0 +1,26 @@
+{
+  "id": "elevenlabs/text-to-speech-turbo-2-5",
+  "category": "audio",
+  "display_name": "ElevenLabs TTS Turbo 2.5",
+  "api_type": "jobs",
+  "operation": "generate",
+  "model_field": "elevenlabs/text-to-speech-turbo-2-5",
+  "output_kind": "audio",
+  "price_hint": "~10 кр.",
+  "estimate_credits": 10,
+  "parameters": [
+    {
+      "name": "text",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "voice",
+      "type": "text",
+      "required": true,
+      "default": "Rachel"
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/elevenlabs/text-to-speech-turbo-2-5"
+}

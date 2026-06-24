@@ -1,0 +1,43 @@
+{
+  "id": "runway/generate",
+  "category": "video",
+  "display_name": "Generate AI Video",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "runway/generate",
+  "price_hint": "~100 кр.",
+  "estimate_credits": 100,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "aspect_ratio",
+      "type": "select",
+      "options": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "default": "16:9"
+    },
+    {
+      "name": "duration",
+      "type": "select",
+      "options": [
+        "5",
+        "10"
+      ],
+      "default": "5"
+    },
+    {
+      "name": "sound",
+      "type": "switch",
+      "default": false
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/runway-api/generate-ai-video.md"
+}

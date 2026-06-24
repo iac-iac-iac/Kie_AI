@@ -1,0 +1,18 @@
+{
+  "id": "recraft/remove-background",
+  "category": "image",
+  "display_name": "Recraft - Remove Background",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "recraft/remove-background",
+  "price_hint": "~10 кр.",
+  "estimate_credits": 10,
+  "parameters": [
+    {
+      "name": "image_url",
+      "type": "image_url",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/recraft/remove-background.md"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "kling/motion-control-v3",
+  "category": "video",
+  "display_name": "Kling-3.0 motion-control",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "kling/motion-control-v3",
+  "price_hint": "~100 кр.",
+  "estimate_credits": 100,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "video_url",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/kling/motion-control-v3.md"
+}

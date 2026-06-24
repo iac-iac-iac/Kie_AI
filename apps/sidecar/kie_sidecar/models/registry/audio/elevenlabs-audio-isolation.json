@@ -1,0 +1,19 @@
+{
+  "id": "elevenlabs/audio-isolation",
+  "category": "audio",
+  "display_name": "ElevenLabs Audio Isolation",
+  "api_type": "jobs",
+  "operation": "generate",
+  "model_field": "elevenlabs/audio-isolation",
+  "output_kind": "audio",
+  "price_hint": "~15 кр.",
+  "estimate_credits": 15,
+  "parameters": [
+    {
+      "name": "audio_url",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/elevenlabs/audio-isolation"
+}

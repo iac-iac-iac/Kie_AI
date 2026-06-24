@@ -1,0 +1,20 @@
+{
+  "id": "suno/lyrics",
+  "category": "audio",
+  "display_name": "Suno Generate Lyrics",
+  "api_type": "suno",
+  "operation": "lyrics",
+  "model_field": "",
+  "output_kind": "text",
+  "price_hint": "~10 кр.",
+  "estimate_credits": 10,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 200
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/generate-lyrics"
+}

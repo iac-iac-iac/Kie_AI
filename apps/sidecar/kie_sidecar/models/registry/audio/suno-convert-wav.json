@@ -1,0 +1,24 @@
+{
+  "id": "suno/convert-wav",
+  "category": "audio",
+  "display_name": "Suno Convert to WAV",
+  "api_type": "suno",
+  "operation": "convert_wav",
+  "model_field": "",
+  "output_kind": "audio",
+  "price_hint": "~20 кр.",
+  "estimate_credits": 20,
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "audio_id",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/convert-wav"
+}

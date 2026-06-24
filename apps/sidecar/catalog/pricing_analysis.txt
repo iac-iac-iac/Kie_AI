@@ -1,0 +1,108 @@
+pricing rows by interfaceType: {'video': 202, 'chat': 45, 'image': 72, 'music': 24}
+pricing with anchor model param: 170, unique: 84
+unique description bases: 90
+
+=== chat unique bases (22) ===
+  Claude-Haiku-4-5
+  Claude-Opus-4-6
+  Claude-Opus-4-7
+  Claude-Opus-4-8
+  Claude-Sonnet-4-6
+  Claude-fable-5
+  Gemini 2.5 Pro
+  Gemini 2.5 flash
+  Gemini 3 Flash
+  Gemini 3 Pro
+  Gemini 3.1 Pro- openai
+  Gemini 3.5 Flash
+  claude-opus-4-5
+  claude-sonnet-4-5
+  gpt-5-2
+  ... +7 more
+
+=== image unique bases (30) ===
+  Black Forest Labs Flux 2 Flex
+  Black Forest Labs flux-2 pro
+  Black Forest Labs flux1-kontext
+  Google nano banana
+  Google nano banana 2
+  Google nano banana edit
+  Google nano banana pro
+  Ideogram V3 Reframe
+  OpenAI 4o image
+  Qwen Image
+  Qwen image-edit
+  Qwen z-image
+  Qwen2 - Image edit
+  Recraft Crisp Upscale
+  Recraft Remove Background
+  ... +15 more
+
+=== video unique bases (33) ===
+  Google veo 3.1
+  HappyHorse-1.0
+  HappyHorse-1.1
+  Kling 2.1
+  Kling 3.0
+  Kling AI Avtar
+  MeiGen-AI InfiniteTalk
+  Runway
+  Runway Aleph
+  Topaz Video Upscaler
+  Wan 2.2 A14B Turbo API Speech to Video
+  bytedance/seedance-1.5-pro
+  bytedance/seedance-2
+  bytedance/seedance-2 fast
+  bytedance/seedance-2-mini
+  ... +18 more
+
+=== music unique bases (5) ===
+  Elevenlabs Audio Isolation
+  Elevenlabs Sound Effect V2
+  Elevenlabs Text to Speech
+  Elevenlabs V3
+  Suno
+
+model-paths count: 176
+paths not in desc bases: 161
+  path-only: bytedance/omni-human
+  path-only: bytedance/seedance-2-asset
+  path-only: bytedance/seedance-2-fast
+  path-only: bytedance/seedance-2-image-to-video 
+  path-only: bytedance/seedance-2-text-to-video 
+  path-only: bytedance/seedream
+  path-only: bytedance/seedream-v4-edit
+  path-only: bytedance/seedream-v4-text-to-image
+  path-only: bytedance/v1-lite-image-to-video
+  path-only: bytedance/v1-lite-text-to-video
+  path-only: bytedance/v1-pro-fast-image-to-video
+  path-only: bytedance/v1-pro-image-to-video
+  path-only: bytedance/v1-pro-text-to-video
+  path-only: claude-fable-5
+  path-only: claude-haiku-4-5
+  path-only: claude-opus-4-6
+  path-only: claude-opus-4-7
+  path-only: claude-opus-4-8
+  path-only: claude-sonnet-4-6
+  path-only: elevenlabs/audio-isolation
+desc bases not in paths: 74
+  desc-only: Black Forest Labs Flux 2 Flex
+  desc-only: Black Forest Labs flux-2 pro
+  desc-only: Black Forest Labs flux1-kontext
+  desc-only: Claude-Haiku-4-5
+  desc-only: Claude-Opus-4-6
+  desc-only: Claude-Opus-4-7
+  desc-only: Claude-Opus-4-8
+  desc-only: Claude-Sonnet-4-6
+  desc-only: Claude-fable-5
+  desc-only: Elevenlabs Audio Isolation
+  desc-only: Elevenlabs Sound Effect V2
+  desc-only: Elevenlabs Text to Speech
+  desc-only: Elevenlabs V3
+  desc-only: Gemini 2.5 Pro
+  desc-only: Gemini 2.5 flash
+  desc-only: Gemini 3 Flash
+  desc-only: Gemini 3 Pro
+  desc-only: Gemini 3.1 Pro- openai
+  desc-only: Gemini 3.5 Flash
+  desc-only: Google nano banana

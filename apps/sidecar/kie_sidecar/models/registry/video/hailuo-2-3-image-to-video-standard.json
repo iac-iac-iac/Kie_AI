@@ -1,0 +1,43 @@
+{
+  "id": "hailuo/2-3-image-to-video-standard",
+  "category": "video",
+  "display_name": "Hailuo 2.3 Standard Image to Video",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "hailuo/2-3-image-to-video-standard",
+  "price_hint": "~100 кр.",
+  "estimate_credits": 100,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "image_url",
+      "type": "image_url",
+      "required": true
+    },
+    {
+      "name": "aspect_ratio",
+      "type": "select",
+      "options": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "default": "16:9"
+    },
+    {
+      "name": "duration",
+      "type": "select",
+      "options": [
+        "5",
+        "10"
+      ],
+      "default": "5"
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/hailuo/2-3-image-to-video-standard.md"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "suno/midi",
+  "category": "audio",
+  "display_name": "Suno MIDI",
+  "api_type": "suno",
+  "operation": "midi",
+  "model_field": "",
+  "output_kind": "audio",
+  "price_hint": "~30 кр.",
+  "estimate_credits": 30,
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "audio_id",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/midi"
+}

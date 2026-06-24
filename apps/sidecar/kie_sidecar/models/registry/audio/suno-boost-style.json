@@ -1,0 +1,20 @@
+{
+  "id": "suno/boost-style",
+  "category": "audio",
+  "display_name": "Suno Boost Style",
+  "api_type": "suno",
+  "operation": "boost_style",
+  "model_field": "",
+  "output_kind": "text",
+  "price_hint": "~5 кр.",
+  "estimate_credits": 5,
+  "parameters": [
+    {
+      "name": "content",
+      "type": "textarea",
+      "required": true,
+      "max_length": 1000
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/boost-music-style"
+}

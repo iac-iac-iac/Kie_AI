@@ -1,0 +1,15 @@
+{
+  "id": "gemini-omni-video",
+  "display_name": "Gemini Omni Video",
+  "api_path": "/gemini-omni-video/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gemini-omni-video",
+  "price_hint": "~0.15 кр/1K tokens",
+  "estimate_credits": 3,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "reasoning_effort": "low"
+  },
+  "docs_url": "https://docs.kie.ai/market/gemini-omni-video.md"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "happyhorse-1-1/image-to-video",
+  "category": "video",
+  "display_name": "HappyHorse-1-1 image-to-video",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "happyhorse-1-1/image-to-video",
+  "price_hint": "~100 кр.",
+  "estimate_credits": 100,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "image_url",
+      "type": "image_url",
+      "required": true
+    },
+    {
+      "name": "aspect_ratio",
+      "type": "select",
+      "options": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "default": "16:9"
+    },
+    {
+      "name": "duration",
+      "type": "select",
+      "options": [
+        "5",
+        "10"
+      ],
+      "default": "5"
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/happyhorse-1-1/image-to-video.md"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "gpt-image-2-image-to-image",
+  "display_name": "Gpt Image 2 Image To Image",
+  "api_path": "/gpt-image-2-image-to-image/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gpt-image-2-image-to-image",
+  "price_hint": "~0.2 кр/1K tokens",
+  "estimate_credits": 4,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "reasoning_effort": "medium"
+  },
+  "docs_url": "https://docs.kie.ai/market/quickstart.md"
+}

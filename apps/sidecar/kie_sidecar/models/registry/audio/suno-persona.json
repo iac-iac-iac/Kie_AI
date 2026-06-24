@@ -1,0 +1,53 @@
+{
+  "id": "suno/persona",
+  "category": "audio",
+  "display_name": "Suno Generate Persona",
+  "api_type": "suno",
+  "operation": "persona",
+  "model_field": "",
+  "output_kind": "metadata",
+  "sync_result": true,
+  "price_hint": "~10 кр.",
+  "estimate_credits": 10,
+  "parameters": [
+    {
+      "name": "task_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "audio_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "name",
+      "type": "text",
+      "required": true,
+      "max_length": 80
+    },
+    {
+      "name": "description",
+      "type": "textarea",
+      "required": true,
+      "max_length": 500
+    },
+    {
+      "name": "style",
+      "type": "textarea",
+      "required": false,
+      "max_length": 1000
+    },
+    {
+      "name": "vocal_start",
+      "type": "number",
+      "required": false
+    },
+    {
+      "name": "vocal_end",
+      "type": "number",
+      "required": false
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/generate-persona"
+}

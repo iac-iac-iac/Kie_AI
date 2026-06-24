@@ -1,0 +1,80 @@
+{
+  "id": "suno/extend",
+  "category": "audio",
+  "display_name": "Suno Extend Music",
+  "api_type": "suno",
+  "operation": "extend",
+  "model_field": "V4_5",
+  "output_kind": "audio",
+  "price_hint": "~80 кр.",
+  "estimate_credits": 80,
+  "parameters": [
+    {
+      "name": "audio_id",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "default_param_flag",
+      "type": "switch",
+      "default": true
+    },
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": false,
+      "max_length": 5000
+    },
+    {
+      "name": "style",
+      "type": "textarea",
+      "required": false,
+      "max_length": 1000,
+      "visible_when": {
+        "default_param_flag": true
+      },
+      "required_when": {
+        "default_param_flag": true
+      }
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "required": false,
+      "max_length": 80,
+      "visible_when": {
+        "default_param_flag": true
+      },
+      "required_when": {
+        "default_param_flag": true
+      }
+    },
+    {
+      "name": "continue_at",
+      "type": "number",
+      "required": false,
+      "visible_when": {
+        "default_param_flag": true
+      },
+      "required_when": {
+        "default_param_flag": true
+      }
+    },
+    {
+      "name": "negative_tags",
+      "type": "text",
+      "required": false,
+      "max_length": 500
+    },
+    {
+      "name": "vocal_gender",
+      "type": "select",
+      "required": false,
+      "options": [
+        "m",
+        "f"
+      ]
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/extend-music"
+}

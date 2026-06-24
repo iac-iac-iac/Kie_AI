@@ -1,0 +1,15 @@
+{
+  "id": "gpt-5-2",
+  "display_name": "GPT 5.2",
+  "api_path": "/gpt-5-2/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gpt-5-2",
+  "price_hint": "~0.2 кр/1K tokens",
+  "estimate_credits": 4,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "reasoning_effort": "medium"
+  },
+  "docs_url": "https://docs.kie.ai/market/chat/gpt-5-2.md"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "kling/v1-avatar-standard",
+  "category": "video",
+  "display_name": "Kling / V1 Avatar Standard",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "kling/v1-avatar-standard",
+  "price_hint": "~120 кр.",
+  "estimate_credits": 120,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": false,
+      "max_length": 2000
+    },
+    {
+      "name": "image_url",
+      "type": "image_url",
+      "required": true
+    },
+    {
+      "name": "audio_url",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/quickstart.md"
+}

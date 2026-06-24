@@ -1,0 +1,15 @@
+{
+  "id": "gemini-3-pro",
+  "display_name": "Gemini 3 Pro (openai)",
+  "api_path": "/gemini-3-pro/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gemini-3-pro",
+  "price_hint": "~0.15 кр/1K tokens",
+  "estimate_credits": 3,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "reasoning_effort": "low"
+  },
+  "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-pro.md"
+}

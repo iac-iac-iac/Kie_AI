@@ -1,0 +1,46 @@
+{
+  "id": "qwen/text-to-image",
+  "category": "image",
+  "display_name": "Qwen - Text to Image",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "qwen/text-to-image",
+  "price_hint": "~15 кр.",
+  "estimate_credits": 15,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "aspect_ratio",
+      "type": "select",
+      "options": [
+        "1:1",
+        "16:9",
+        "9:16",
+        "4:3",
+        "3:4",
+        "21:9"
+      ],
+      "default": "1:1"
+    },
+    {
+      "name": "resolution",
+      "type": "select",
+      "options": [
+        "1K",
+        "2K"
+      ],
+      "default": "1K"
+    },
+    {
+      "name": "nsfw_checker",
+      "type": "switch",
+      "default": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/qwen/text-to-image.md"
+}

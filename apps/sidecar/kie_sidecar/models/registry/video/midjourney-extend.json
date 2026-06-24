@@ -1,0 +1,24 @@
+{
+  "id": "midjourney/extend",
+  "category": "video",
+  "display_name": "Midjourney / Extend",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "midjourney/extend",
+  "price_hint": "~100 кр.",
+  "estimate_credits": 100,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "video_url",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/quickstart.md"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "nano-banana-upscale",
+  "category": "image",
+  "display_name": "Nano Banana Upscale",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "nano-banana-upscale",
+  "price_hint": "~10 кр.",
+  "estimate_credits": 10,
+  "parameters": [
+    {
+      "name": "image_url",
+      "type": "image_url",
+      "required": true
+    },
+    {
+      "name": "scale",
+      "type": "select",
+      "options": [
+        "2",
+        "4"
+      ],
+      "default": "2"
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/quickstart.md"
+}

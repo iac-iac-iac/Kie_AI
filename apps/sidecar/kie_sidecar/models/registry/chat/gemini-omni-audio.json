@@ -1,0 +1,15 @@
+{
+  "id": "gemini-omni-audio",
+  "display_name": "Gemini Omni Audio",
+  "api_path": "/gemini-omni-audio/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gemini-omni-audio",
+  "price_hint": "~0.15 кр/1K tokens",
+  "estimate_credits": 3,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "reasoning_effort": "low"
+  },
+  "docs_url": "https://docs.kie.ai/market/gemini-omni-audio.md"
+}

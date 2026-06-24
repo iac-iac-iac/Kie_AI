@@ -1,0 +1,60 @@
+{
+  "id": "suno/v5-5",
+  "category": "audio",
+  "display_name": "Suno V5.5",
+  "api_type": "suno",
+  "operation": "generate",
+  "model_field": "V5_5",
+  "output_kind": "audio",
+  "price_hint": "~130 кр.",
+  "estimate_credits": 130,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "instrumental",
+      "type": "switch",
+      "default": true
+    },
+    {
+      "name": "custom_mode",
+      "type": "switch",
+      "default": false
+    },
+    {
+      "name": "style",
+      "type": "textarea",
+      "required": false,
+      "max_length": 1000,
+      "visible_when": {
+        "custom_mode": true
+      },
+      "required_when": {
+        "custom_mode": true
+      }
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "required": false,
+      "max_length": 80,
+      "visible_when": {
+        "custom_mode": true
+      },
+      "required_when": {
+        "custom_mode": true
+      }
+    },
+    {
+      "name": "negative_tags",
+      "type": "text",
+      "required": false,
+      "max_length": 500
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/generate-music"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "suno/add-instrumental",
+  "category": "audio",
+  "display_name": "Suno Add Instrumental",
+  "api_type": "suno",
+  "operation": "add_instrumental",
+  "model_field": "V4_5",
+  "output_kind": "audio",
+  "price_hint": "~70 кр.",
+  "estimate_credits": 70,
+  "parameters": [
+    {
+      "name": "upload_url",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "title",
+      "type": "text",
+      "required": true,
+      "max_length": 80
+    },
+    {
+      "name": "tags",
+      "type": "text",
+      "required": true,
+      "max_length": 500
+    },
+    {
+      "name": "negative_tags",
+      "type": "text",
+      "required": true,
+      "max_length": 500
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/suno-api/add-instrumental"
+}

@@ -1,0 +1,568 @@
+{
+  "app": {
+    "title": "Kie AI Desktop"
+  },
+  "window": {
+    "minimize": "Minimize",
+    "maximize": "Maximize",
+    "restore": "Restore",
+    "close": "Close"
+  },
+  "common": {
+    "searchModels": "Search models…",
+    "noModelsFound": "No models match your search",
+    "selectModel": "Select a model",
+    "cancel": "Cancel"
+  },
+  "nav": {
+    "chats": "Chats",
+    "images": "Images",
+    "video": "Video",
+    "audio": "Audio",
+    "settings": "Settings"
+  },
+  "theme": {
+    "dark": "dark",
+    "light": "light",
+    "toggle": "Switch to {{mode}} theme"
+  },
+  "models": {
+    "favorites": "Favorites",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "priceUpdated": "Price updated: {{date}}",
+    "capability": {
+      "textToImage": "text to image",
+      "imageToImage": "image to image",
+      "textToVideo": "text to video",
+      "imageToVideo": "image to video",
+      "edit": "edit",
+      "preview": "preview"
+    }
+  },
+  "apiKey": {
+    "banner": "Connect your kie.ai API key to use models and generate content.",
+    "invalidKey": "Your API key is invalid or expired. Update it in Settings.",
+    "networkBlocked": "Could not verify the API key. Check your network or proxy in Settings.",
+    "goToSettings": "Open Settings",
+    "modelsLocked": "Models are unavailable until you add a working API key in Settings."
+  },
+  "onboarding": {
+    "step": "Step {{current}} of {{total}}",
+    "welcomeTitle": "Welcome to Kie AI Desktop",
+    "welcomeBody": "Chat with AI models, generate images and videos — all through kie.ai in one desktop app.",
+    "apiKeyTitle": "Connect your API key",
+    "apiKeyBody": "Get your key at kie.ai and paste it in Settings. Without a key, models and generation stay locked.",
+    "openSettings": "Go to Settings →",
+    "readyTitle": "You're all set",
+    "readyBody": "Pick a tab — Chats, Images, or Video — and start creating. You can change theme and proxy anytime in Settings.",
+    "skip": "Skip",
+    "back": "Back",
+    "next": "Next",
+    "start": "Get started"
+  },
+  "balance": {
+    "label": "Balance",
+    "credits": "{{count}} cr.",
+    "noKey": "No API key",
+    "loading": "Loading…",
+    "refresh": "Refresh",
+    "errorAuth": "Set API key in Settings",
+    "errorNetwork": "Check network or proxy"
+  },
+  "settings": {
+    "title": "Settings",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "Enter your kie.ai API key",
+    "apiKeySave": "Save key",
+    "apiKeySaved": "Key saved and applied",
+    "apiKeyError": "Failed to save key",
+    "proxy": "Proxy",
+    "proxyEnabled": "Enable proxy",
+    "proxyUrl": "Proxy URL",
+    "proxyHint": "http://, https:// or socks5://",
+    "interface": "Interface",
+    "theme": "Theme",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "themeSystem": "System",
+    "locale": "Language",
+    "notifications": "Notifications",
+    "notificationsEnabled": "Notify on generation complete",
+    "sessionLimit": "Session limit",
+    "sessionLimitEnabled": "Enable session credit limit",
+    "sessionLimitCredits": "Max credits per session",
+    "testConnection": "Test connection",
+    "testOk": "Connected. Balance: {{credits}} cr.",
+    "testFail": "Connection failed: {{error}}",
+    "save": "Save settings",
+    "apiKeyDelete": "Delete API key",
+    "apiKeyDeleteConfirm": "Remove the stored API key? Models and generation will be locked until you add a new key.",
+    "apiKeyDeleted": "API key removed",
+    "apiKeyDeleteError": "Failed to delete API key",
+    "tabs": {
+      "general": "General",
+      "interface": "Interface",
+      "shortcuts": "Shortcuts",
+      "diagnostics": "Diagnostics",
+      "backup": "Backup"
+    }
+  },
+  "shortcuts": {
+    "hint": "Keyboard shortcuts work inside the app window.",
+    "action": "Action",
+    "keys": "Shortcut",
+    "navChats": "Go to Chats",
+    "navImages": "Go to Images",
+    "navVideo": "Go to Video",
+    "navSettings": "Go to Settings",
+    "openSettings": "Open Settings",
+    "sendOrGenerate": "Send message / Generate",
+    "newChat": "New chat",
+    "repeatGeneration": "Repeat generation",
+    "dismiss": "Dismiss selection / close"
+  },
+  "diagnostics": {
+    "sidecarVersion": "Sidecar v{{version}}",
+    "keyPresent": "Stored in Windows Credential Manager",
+    "keyMissing": "Not stored",
+    "kieOk": "Authorized, balance {{credits}} cr.",
+    "kieFail": "Failed: {{error}}",
+    "kieNotRun": "Run connection test",
+    "proxyOff": "Disabled",
+    "proxyMissingUrl": "Enabled but URL is empty",
+    "copyReport": "Copy report",
+    "reportCopied": "Report copied to clipboard",
+    "reportCopyFailed": "Could not copy report",
+    "paths": "Data paths",
+    "open": "Open",
+    "openFailed": "Could not open path",
+    "pricingUpdatedAt": "Updated {{date}}",
+    "pricingNotSynced": "Not synced yet",
+    "checks": {
+      "sidecar": "Sidecar",
+      "keyring": "API key (keyring)",
+      "kieAuth": "kie.ai authorization",
+      "proxy": "Proxy",
+      "appVersion": "App version",
+      "pricingUpdated": "Model pricing"
+    },
+    "pathLabels": {
+      "data_dir": "Data folder",
+      "db_path": "Database",
+      "media_dir": "Media",
+      "logs_dir": "Logs"
+    }
+  },
+  "updater": {
+    "check": "Check for updates",
+    "checking": "Checking…",
+    "upToDate": "You have the latest version",
+    "available": "Update available: v{{version}}",
+    "install": "Install and restart",
+    "installing": "Installing…",
+    "error": "Could not check for updates",
+    "banner": "Update v{{version}} is available"
+  },
+  "backup": {
+    "description": "Export chats, settings and generation metadata. Restore after reinstall or on another PC.",
+    "noApiKey": "API keys are not included in backups (they stay in Windows Credential Manager).",
+    "includeMedia": "Include media files",
+    "includeMediaWarning": "Large archive — images and videos can take significant disk space.",
+    "export": "Export backup",
+    "exporting": "Exporting…",
+    "exportSuccess": "Backup saved",
+    "exportFailed": "Export failed",
+    "import": "Import backup",
+    "importing": "Importing…",
+    "importSuccess": "Backup restored. Restart may be required for some data.",
+    "importFailed": "Import failed",
+    "exportDialogTitle": "Save backup",
+    "importDialogTitle": "Select backup file",
+    "fileFilter": "Kie AI backup",
+    "importConfirmTitle": "Restore backup?",
+    "importConfirmMessage": "Current database will be replaced. This cannot be undone."
+  },
+  "chats": {
+    "loading": "Loading chats…",
+    "emptyState": "Select a chat or create a new one",
+    "welcomeTitle": "Start a conversation",
+    "welcomeHint": "Pick a model and create your first chat",
+    "badgeVision": "Vision",
+    "badgeTools": "Tools",
+    "newChat": "New chat",
+    "newFolder": "New folder",
+    "folderNamePrompt": "Folder name",
+    "allChats": "All chats",
+    "model": "Model",
+    "send": "Send",
+    "stop": "Stop",
+    "inputPlaceholder": "Type a message… (Ctrl+Enter to send)",
+    "deleteChat": "Delete chat",
+    "tokensIn": "in: {{count}}",
+    "tokensOut": "out: {{count}}",
+    "creditsUsed": "−{{credits}} cr.",
+    "tools": "Tools",
+    "attachImage": "Image",
+    "removeImage": "Remove",
+    "uploading": "Uploading…",
+    "dismiss": "Dismiss",
+    "retry": "Retry",
+    "creating": "Creating…",
+    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorNoModels": "Chat models failed to load. Restart the app.",
+    "errorCreate": "Failed to create chat",
+    "search": "Search chats…",
+    "searchMessages": "Search in chat…",
+    "rename": "Rename",
+    "renamePrompt": "Chat title",
+    "export": "Export",
+    "exportSuccess": "Chat saved",
+    "exportFailed": "Export failed",
+    "copy": "Copy",
+    "copied": "Copied",
+    "folderRename": "Rename folder",
+    "folderDelete": "Delete folder",
+    "folderDeleteConfirm": "Delete folder? Chats will remain without a folder.",
+    "collapseFolder": "Collapse",
+    "expandFolder": "Expand"
+  },
+  "images": {
+    "loading": "Loading…",
+    "gallery": "Gallery",
+    "generate": "Generate",
+    "generating": "Generating…",
+    "model": "Model",
+    "parameters": "Parameters",
+    "prompt": "Prompt",
+    "promptPlaceholder": "Describe the image…",
+    "statusPending": "Queued…",
+    "statusRunning": "Generating…",
+    "statusDownloading": "Downloading…",
+    "statusSuccess": "Done",
+    "statusFailed": "Failed",
+    "creditsUsed": "−{{credits}} cr.",
+    "delete": "Delete",
+    "emptyGallery": "No images yet. Create your first!",
+    "newGeneration": "New generation",
+    "noPreview": "No preview",
+    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorNoKey": "Set API key in Settings",
+    "errorGenerate": "Failed to start generation",
+    "errorUnknown": "Could not download the image. Check proxy in Settings and try again.",
+    "retryDownload": "Retry download",
+    "retrying": "Retrying…",
+    "retry": "Retry",
+    "addReference": "Add reference",
+    "removeReference": "Remove",
+    "uploading": "Uploading…",
+    "uploadError": "Failed to upload image",
+    "urlPlaceholder": "Paste image URL or upload"
+  },
+  "video": {
+    "loading": "Loading…",
+    "gallery": "Gallery",
+    "generate": "Generate",
+    "generating": "Generating…",
+    "model": "Model",
+    "parameters": "Parameters",
+    "prompt": "Prompt",
+    "promptPlaceholder": "Describe the video…",
+    "references": "Reference images",
+    "addReference": "Add reference",
+    "removeReference": "Remove",
+    "uploading": "Uploading…",
+    "uploadError": "Failed to upload image",
+    "statusPending": "Queued…",
+    "statusRunning": "Generating…",
+    "statusDownloading": "Downloading…",
+    "statusSuccess": "Done",
+    "statusFailed": "Failed",
+    "creditsUsed": "−{{credits}} cr.",
+    "delete": "Delete",
+    "emptyGallery": "No videos yet. Create your first!",
+    "newGeneration": "New generation",
+    "noPreview": "No preview",
+    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorNoKey": "Set API key in Settings",
+    "errorGenerate": "Failed to start generation",
+    "errorUnknown": "Could not download the video. Check proxy in Settings and try again.",
+    "retryDownload": "Retry download",
+    "retrying": "Retrying…",
+    "retry": "Retry"
+  },
+  "audio": {
+    "loading": "Loading…",
+    "gallery": "Gallery",
+    "generate": "Generate",
+    "generating": "Generating…",
+    "model": "Model",
+    "parameters": "Parameters",
+    "prompt": "Prompt",
+    "promptPlaceholder": "Describe the music (simple mode) or enter lyrics (custom mode)…",
+    "stylePlaceholder": "Genre, mood, instruments — e.g. indie folk, acoustic guitar",
+    "statusPending": "Queued…",
+    "statusRunning": "Generating…",
+    "statusDownloading": "Downloading…",
+    "statusSuccess": "Done",
+    "statusFailed": "Failed",
+    "creditsUsed": "−{{credits}} cr.",
+    "delete": "Delete",
+    "emptyGallery": "No tracks yet. Create your first!",
+    "newGeneration": "New generation",
+    "noPreview": "No preview",
+    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorNoKey": "Set API key in Settings",
+    "errorGenerate": "Failed to start generation",
+    "errorUnknown": "Could not download the audio. Check proxy in Settings and try again.",
+    "retryDownload": "Retry download",
+    "retrying": "Retrying…",
+    "retry": "Retry",
+    "params": {
+      "instrumental": "Instrumental"
+    }
+  },
+  "generation": {
+    "costEstimate": "~{{credits}} cr.",
+    "sessionAfter": "After generation: {{after}} / {{limit}} cr.",
+    "sessionExceeded": "Session limit exceeded ({{after}} / {{limit}} cr.)",
+    "revealInExplorer": "Show in Explorer",
+    "repeat": "Repeat",
+    "vary": "Variation"
+  },
+  "session": {
+    "label": "Session",
+    "usage": "{{spent}} / {{limit}} cr."
+  },
+  "errors": {
+    "invalidKey": "Invalid API key. Check Settings.",
+    "insufficientCredits": "Insufficient credits.",
+    "sessionLimit": "Session credit limit exceeded.",
+    "rateLimit": "Too many requests. Please wait and try again.",
+    "generationFailed": "Generation failed.",
+    "maintenance": "Service is under maintenance.",
+    "network": "Check network or proxy in Settings."
+  },
+  "notifications": {
+    "generationSuccess": "{{type}} generation complete",
+    "generationFailed": "{{type}} generation failed"
+  },
+  "params": {
+    "prompt": {
+      "label": "Prompt",
+      "hint": "Describe what you want to generate. Be specific about style, subject, and mood."
+    },
+    "negative_prompt": {
+      "label": "Negative prompt",
+      "hint": "What to avoid in the image: artifacts, blur, unwanted objects, etc."
+    },
+    "aspect_ratio": {
+      "label": "Aspect ratio",
+      "hint": "Shape of the output frame. Match your target platform (e.g. 16:9 for landscape video).",
+      "options": {
+        "auto": "Auto — match input",
+        "adaptive": "Adaptive",
+        "1__1": "1:1 — square",
+        "2__3": "2:3 — portrait",
+        "3__2": "3:2 — landscape",
+        "4__3": "4:3",
+        "3__4": "3:4",
+        "16__9": "16:9 — widescreen",
+        "9__16": "9:16 — vertical",
+        "5__4": "5:4",
+        "4__5": "4:5",
+        "21__9": "21:9 — ultrawide"
+      }
+    },
+    "resolution": {
+      "label": "Resolution",
+      "hint": "Output size. Higher resolution costs more credits and takes longer.",
+      "options": {
+        "1K": "1K — standard",
+        "2K": "2K — high detail",
+        "480p": "480p — fast, lower cost",
+        "720p": "720p — balanced",
+        "1080p": "1080p — full HD",
+        "4k": "4K — ultra HD"
+      }
+    },
+    "nsfw_checker": {
+      "label": "Content filter",
+      "hint": "When enabled, unsafe content is filtered before you see the result."
+    },
+    "output_format": {
+      "label": "File format",
+      "hint": "PNG supports transparency; JPEG produces smaller files.",
+      "options": {
+        "png": "PNG",
+        "jpeg": "JPEG"
+      }
+    },
+    "quality": {
+      "label": "Quality",
+      "hint": "High outputs 4K images; Basic is faster and cheaper.",
+      "options": {
+        "basic": "Basic (2K)",
+        "high": "High (4K)"
+      }
+    },
+    "image_urls": {
+      "label": "Source image",
+      "hint": "Upload the image to animate. Required for image-to-video models."
+    },
+    "input_urls": {
+      "label": "Reference images",
+      "hint": "Optional reference images (0–2) to guide style or composition."
+    },
+    "sound": {
+      "label": "Sound",
+      "hint": "Generate audio track together with the video."
+    },
+    "duration": {
+      "label": "Duration",
+      "hint": "Length of the video in seconds. Longer clips cost more credits.",
+      "options": {
+        "4": "4 seconds",
+        "5": "5 seconds",
+        "6": "6 seconds",
+        "7": "7 seconds",
+        "8": "8 seconds",
+        "9": "9 seconds",
+        "10": "10 seconds",
+        "11": "11 seconds",
+        "12": "12 seconds",
+        "13": "13 seconds",
+        "14": "14 seconds",
+        "15": "15 seconds"
+      }
+    },
+    "fixed_lens": {
+      "label": "Fixed lens",
+      "hint": "Keeps the camera static without simulated camera movement."
+    },
+    "generate_audio": {
+      "label": "Generate audio",
+      "hint": "Add a synchronized audio track to the video. Increases generation cost."
+    },
+    "first_frame_url": {
+      "label": "First frame",
+      "hint": "Optional starting image for image-to-video. Leave empty for text-only generation."
+    },
+    "last_frame_url": {
+      "label": "Last frame",
+      "hint": "Optional ending image for first-and-last-frame video generation."
+    },
+    "image_url": {
+      "label": "Image URL",
+      "hint": "Paste a URL or upload an image file."
+    },
+    "reference_image_urls": {
+      "label": "Reference images",
+      "hint": "Optional reference images to guide style, subject, or composition."
+    },
+    "enable_pro": {
+      "label": "Quality mode",
+      "hint": "When enabled, prioritizes output quality over speed."
+    },
+    "cfg_scale": {
+      "label": "CFG scale",
+      "hint": "How closely the model follows your prompt (0–1). Higher = stricter adherence."
+    },
+    "style": {
+      "label": "Style",
+      "hint": "Visual style preset for the generation.",
+      "options": {
+        "AUTO": "Auto",
+        "GENERAL": "General",
+        "REALISTIC": "Realistic",
+        "DESIGN": "Design",
+        "RENDER_3D": "3D render",
+        "ANIME": "Anime"
+      }
+    },
+    "web_search": {
+      "label": "Web search",
+      "hint": "Allow the model to use online search for richer context."
+    },
+    "instrumental": {
+      "label": "Instrumental",
+      "hint": "Generate music without vocals. Turn off to include singing (custom mode uses prompt as lyrics)."
+    },
+    "custom_mode": {
+      "label": "Custom mode",
+      "hint": "Advanced mode: set genre (style), track title, and lyrics in prompt. Requires style and title."
+    },
+    "title": {
+      "label": "Track title",
+      "hint": "Song title shown in results (required in custom mode, max 80 characters)."
+    },
+    "negative_tags": {
+      "label": "Negative tags",
+      "hint": "Styles or elements to avoid, e.g. heavy metal, autotune, drums."
+    },
+    "upload_url": {
+      "label": "Audio upload URL",
+      "hint": "Public URL of the audio file (upload via Kie file API first)."
+    },
+    "audio_url": {
+      "label": "Audio URL",
+      "hint": "Public URL of the source audio file."
+    },
+    "audio_id": {
+      "label": "Audio ID",
+      "hint": "ID of the track from a previous Suno generation result."
+    },
+    "task_id": {
+      "label": "Task ID",
+      "hint": "Task ID from the original Suno generation."
+    },
+    "text": {
+      "label": "Text",
+      "hint": "Text to convert to speech."
+    },
+    "voice": {
+      "label": "Voice",
+      "hint": "Preset voice name (e.g. Rachel, Adam) or ElevenLabs voice ID."
+    },
+    "content": {
+      "label": "Style description",
+      "hint": "Describe the music style to enhance."
+    },
+    "tags": {
+      "label": "Style tags",
+      "hint": "Genre and mood tags for instrumental generation."
+    },
+    "name": {
+      "label": "Persona name",
+      "hint": "Display name for the generated persona."
+    },
+    "description": {
+      "label": "Persona description",
+      "hint": "Describe the vocal character and style."
+    },
+    "default_param_flag": {
+      "label": "Use original parameters",
+      "hint": "When enabled, style, title, and continue_at are required."
+    },
+    "continue_at": {
+      "label": "Continue at (seconds)",
+      "hint": "Timestamp in the source track where extension should begin."
+    },
+    "vocal_gender": {
+      "label": "Vocal gender",
+      "hint": "Preferred vocal gender for the extension."
+    },
+    "type": {
+      "label": "Separation type",
+      "hint": "separate_vocal — vocals + instrumental; split_stem — individual stems."
+    },
+    "vocal_start": {
+      "label": "Vocal start (seconds)",
+      "hint": "Start of the vocal segment used for persona."
+    },
+    "vocal_end": {
+      "label": "Vocal end (seconds)",
+      "hint": "End of the vocal segment used for persona."
+    }
+  }
+}

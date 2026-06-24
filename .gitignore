@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Build
+dist/
+build/
+target/
+apps/desktop/src-tauri/bin/
+apps/desktop/src-tauri/binaries/*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Data & secrets
+*.db
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Cursor / local
+.cursor/
+*.plan.md
+
+# Catalog dumps (regenerate via scripts)
+apps/sidecar/catalog/model_pricing_all.json
+
+# Playwright MCP
+.playwright-mcp/

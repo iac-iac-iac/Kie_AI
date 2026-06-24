@@ -1,0 +1,15 @@
+{
+  "id": "gemini-2.5-flash",
+  "display_name": "Gemini 2.5 Flash (openai)",
+  "api_path": "/gemini-2.5-flash/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gemini-2.5-flash",
+  "price_hint": "~0.15 кр/1K tokens",
+  "estimate_credits": 3,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "reasoning_effort": "low"
+  },
+  "docs_url": "https://docs.kie.ai/market/gemini/gemini-2-5-flash.md"
+}

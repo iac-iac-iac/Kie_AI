@@ -1,0 +1,24 @@
+{
+  "id": "runway/aleph",
+  "category": "video",
+  "display_name": "Generate Aleph Video",
+  "api_type": "jobs",
+  "create_path": "/api/v1/jobs/createTask",
+  "model_field": "runway/aleph",
+  "price_hint": "~100 кр.",
+  "estimate_credits": 100,
+  "parameters": [
+    {
+      "name": "prompt",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "video_url",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/runway-api/generate-aleph-video.md"
+}

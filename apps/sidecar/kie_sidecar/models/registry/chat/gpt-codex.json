@@ -1,0 +1,13 @@
+{
+  "id": "gpt-codex",
+  "display_name": "GPT Codex",
+  "api_path": "/gpt-codex/v1/chat/completions",
+  "api_style": "openai",
+  "model_field": "gpt-codex",
+  "price_hint": "~0.2 кр/1K tokens",
+  "estimate_credits": 4,
+  "supports_vision": false,
+  "supports_tools": true,
+  "default_params": {},
+  "docs_url": "https://docs.kie.ai/market/codex/gpt-codex.md"
+}

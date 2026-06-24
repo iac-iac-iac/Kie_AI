@@ -1,0 +1,15 @@
+{
+  "id": "claude-haiku-4-5",
+  "display_name": "Claude Haiku 4.5",
+  "api_path": "/claude/v1/messages",
+  "api_style": "claude",
+  "model_field": "claude-haiku-4-5",
+  "price_hint": "~0.3 кр/1K tokens",
+  "estimate_credits": 5,
+  "supports_vision": true,
+  "supports_tools": true,
+  "default_params": {
+    "max_tokens": 4096
+  },
+  "docs_url": "https://docs.kie.ai/market/claude/claude-haiku-4-5.md"
+}

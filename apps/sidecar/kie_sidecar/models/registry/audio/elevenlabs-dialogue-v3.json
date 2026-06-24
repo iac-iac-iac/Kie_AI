@@ -1,0 +1,26 @@
+{
+  "id": "elevenlabs/text-to-dialogue-v3",
+  "category": "audio",
+  "display_name": "ElevenLabs Dialogue v3",
+  "api_type": "jobs",
+  "operation": "generate",
+  "model_field": "elevenlabs/text-to-dialogue-v3",
+  "output_kind": "audio",
+  "price_hint": "~20 кр.",
+  "estimate_credits": 20,
+  "parameters": [
+    {
+      "name": "text",
+      "type": "textarea",
+      "required": true,
+      "max_length": 5000
+    },
+    {
+      "name": "voice",
+      "type": "text",
+      "required": true,
+      "default": "Rachel"
+    }
+  ],
+  "docs_url": "https://docs.kie.ai/market/elevenlabs/text-to-dialogue-v3"
+}

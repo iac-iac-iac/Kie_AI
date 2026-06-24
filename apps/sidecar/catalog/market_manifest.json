@@ -1,0 +1,1685 @@
+[
+  {
+    "id": "claude-fable-5",
+    "category": "chat",
+    "display_name": "Claude Fable 5",
+    "model_field": "claude-fable-5",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/cluade-fable-5.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-haiku-4-5",
+    "category": "chat",
+    "display_name": "Claude Haiku 4.5",
+    "model_field": "claude-haiku-4-5",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-haiku-4-5.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-opus-4-5",
+    "category": "chat",
+    "display_name": "Claude Opus 4.5",
+    "model_field": "claude-opus-4-5",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-opus-4-5.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-opus-4-6",
+    "category": "chat",
+    "display_name": "Claude Opus 4.6",
+    "model_field": "claude-opus-4-6",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-opus-4-6.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-opus-4-7",
+    "category": "chat",
+    "display_name": "Claude Opus 4.7",
+    "model_field": "claude-opus-4-7",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-opus-4-7.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-opus-4-8",
+    "category": "chat",
+    "display_name": "Claude Opus 4.8",
+    "model_field": "claude-opus-4-8",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-opus-4-8.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-sonnet-4-5",
+    "category": "chat",
+    "display_name": "Claude Sonnet 4.5",
+    "model_field": "claude-sonnet-4-5",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-sonnet-4-5.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "claude-sonnet-4-6",
+    "category": "chat",
+    "display_name": "Claude Sonnet 4.6",
+    "model_field": "claude-sonnet-4-6",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/claude/claude-sonnet-4-6.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-2.5-flash",
+    "category": "chat",
+    "display_name": "Gemini 2.5 Flash (openai)",
+    "model_field": "gemini-2.5-flash",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-2-5-flash.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-2.5-pro",
+    "category": "chat",
+    "display_name": "Gemini  2.5 Pro (openai)",
+    "model_field": "gemini-2.5-pro",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-2-5-pro.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3-5-flash",
+    "category": "chat",
+    "display_name": "Gemini 3.5 Flash",
+    "model_field": "gemini-3-5-flash",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-5-flash.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3-5-flash-openai",
+    "category": "chat",
+    "display_name": "Gemini 3.5 Flash (openai)",
+    "model_field": "gemini-3-5-flash-openai",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-5-flash-openai.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3-flash",
+    "category": "chat",
+    "display_name": "Gemini 3 Flash (openai)",
+    "model_field": "gemini-3-flash",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-flash.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3-flash-v1beta",
+    "category": "chat",
+    "display_name": "Gemini 3 Flash",
+    "model_field": "gemini-3-flash-v1beta",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-flash-v1beta.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3-flash-v1betamodels",
+    "category": "chat",
+    "display_name": "Gemini 3 Flash V1Betamodels",
+    "model_field": "gemini-3-flash-v1betamodels",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3-pro",
+    "category": "chat",
+    "display_name": "Gemini 3 Pro (openai)",
+    "model_field": "gemini-3-pro",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-pro.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-3.1-pro",
+    "category": "chat",
+    "display_name": "Gemini 3.1 Pro (openai)",
+    "model_field": "gemini-3.1-pro",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/gemini/gemini-3-1-pro.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-omni-audio",
+    "category": "chat",
+    "display_name": "Gemini Omni Audio",
+    "model_field": "gemini-omni-audio",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/gemini-omni-audio.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-omni-character",
+    "category": "chat",
+    "display_name": "Gemini Omni Character",
+    "model_field": "gemini-omni-character",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/gemini-omni-character.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gemini-omni-video",
+    "category": "chat",
+    "display_name": "Gemini Omni Video",
+    "model_field": "gemini-omni-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/gemini-omni-video.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5-2",
+    "category": "chat",
+    "display_name": "GPT 5.2",
+    "model_field": "gpt-5-2",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/chat/gpt-5-2.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5-4",
+    "category": "chat",
+    "display_name": "GPT 5.4 (response)",
+    "model_field": "gpt-5-4",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/chat/gpt-5-4.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5-5",
+    "category": "chat",
+    "display_name": "GPT 5.5 (response)",
+    "model_field": "gpt-5-5",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/chat/gpt-5-5.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5-codex",
+    "category": "chat",
+    "display_name": "Gpt 5 Codex",
+    "model_field": "gpt-5-codex",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5.1-codex",
+    "category": "chat",
+    "display_name": "Gpt 5.1 Codex",
+    "model_field": "gpt-5.1-codex",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5.2-codex",
+    "category": "chat",
+    "display_name": "Gpt 5.2 Codex",
+    "model_field": "gpt-5.2-codex",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5.3-codex",
+    "category": "chat",
+    "display_name": "Gpt 5.3 Codex",
+    "model_field": "gpt-5.3-codex",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-5.4-codex",
+    "category": "chat",
+    "display_name": "Gpt 5.4 Codex",
+    "model_field": "gpt-5.4-codex",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-codex",
+    "category": "chat",
+    "display_name": "GPT Codex",
+    "model_field": "gpt-codex",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/codex/gpt-codex.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-image-2-image-to-image",
+    "category": "chat",
+    "display_name": "Gpt Image 2 Image To Image",
+    "model_field": "gpt-image-2-image-to-image",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "gpt-image-2-text-to-image",
+    "category": "chat",
+    "display_name": "Gpt Image 2 Text To Image",
+    "model_field": "gpt-image-2-text-to-image",
+    "template": "chat",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "chat"
+  },
+  {
+    "id": "4o-image/generate",
+    "category": "image",
+    "display_name": "Generate 4o Image",
+    "model_field": "4o-image/generate",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/4o-image-api/generate-4-o-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedream",
+    "category": "image",
+    "display_name": "Bytedance / Seedream",
+    "model_field": "bytedance/seedream",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedream-v4-edit",
+    "category": "image",
+    "display_name": "Bytedance / Seedream V4 Edit",
+    "model_field": "bytedance/seedream-v4-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedream-v4-text-to-image",
+    "category": "image",
+    "display_name": "Bytedance / Seedream V4 Text To Image",
+    "model_field": "bytedance/seedream-v4-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "features/flux1-kontext",
+    "category": "image",
+    "display_name": "Features / Flux1 Kontext",
+    "model_field": "features/flux1-kontext",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "features/mj-api",
+    "category": "image",
+    "display_name": "Features / Mj Api",
+    "model_field": "features/mj-api",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "flux-2/flex-image-to-image",
+    "category": "image",
+    "display_name": "Flux-2 - Image to Image",
+    "model_field": "flux-2/flex-image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/flux2/flex-image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "flux-2/flex-text-to-image",
+    "category": "image",
+    "display_name": "Flux-2 - Text to Image",
+    "model_field": "flux-2/flex-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/flux2/flex-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "flux-2/pro-image-to-image",
+    "category": "image",
+    "display_name": "Flux-2 - Pro Image to Image",
+    "model_field": "flux-2/pro-image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/flux2/pro-image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "flux-2/pro-text-to-image",
+    "category": "image",
+    "display_name": "Flux-2 - Pro Text to Image",
+    "model_field": "flux-2/pro-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/flux2/pro-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "flux-kontext/generate-or-edit",
+    "category": "image",
+    "display_name": "Generate or Edit Image",
+    "model_field": "flux-kontext/generate-or-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/flux-kontext-api/generate-or-edit-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/imagen4",
+    "category": "image",
+    "display_name": "Google - imagen4",
+    "model_field": "google/imagen4",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/google/imagen4.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/imagen4-fast",
+    "category": "image",
+    "display_name": "Google - imagen4-fast",
+    "model_field": "google/imagen4-fast",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/google/imagen4-fast.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/imagen4-ultra",
+    "category": "image",
+    "display_name": "Google - imagen4-ultra",
+    "model_field": "google/imagen4-ultra",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/google/imagen4-ultra.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/nano-banana",
+    "category": "image",
+    "display_name": "Google - Nano Banana",
+    "model_field": "google/nano-banana",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/google/nano-banana.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/nano-banana-edit",
+    "category": "image",
+    "display_name": "Google - Nano Banana Edit",
+    "model_field": "google/nano-banana-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/google/nano-banana-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/nanobanana2",
+    "category": "image",
+    "display_name": "Google - Nano Banana 2",
+    "model_field": "google/nanobanana2",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/google/nanobanana2.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/pro-image-to-image",
+    "category": "image",
+    "display_name": "Google - Nano Banana Pro",
+    "model_field": "google/pro-image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/google/pro-image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "gpt-image/1.5-image-to-image",
+    "category": "image",
+    "display_name": "GPT Image-1.5 - Image to Image",
+    "model_field": "gpt-image/1.5-image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/gpt-image/1-5-image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "gpt-image/1.5-text-to-image",
+    "category": "image",
+    "display_name": "GPT Image-1.5 - Text to Image",
+    "model_field": "gpt-image/1.5-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/gpt-image/1-5-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "gpt/gpt-image-2-image-to-image",
+    "category": "image",
+    "display_name": "GPT Image 2 - Image To Image",
+    "model_field": "gpt/gpt-image-2-image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/gpt/gpt-image-2-image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "gpt/gpt-image-2-text-to-image",
+    "category": "image",
+    "display_name": "GPT Image-2 - Text to Image",
+    "model_field": "gpt/gpt-image-2-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/gpt/gpt-image-2-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/image-to-image",
+    "category": "image",
+    "display_name": "Grok Imagine - image to image",
+    "model_field": "grok-imagine/image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/text-to-image",
+    "category": "image",
+    "display_name": "Grok Imagine - Text to Image",
+    "model_field": "grok-imagine/text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/upscale",
+    "category": "image",
+    "display_name": "Grok Imagine - Video Upscale",
+    "model_field": "grok-imagine/upscale",
+    "template": "image_upscale",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/upscale.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/character",
+    "category": "image",
+    "display_name": "Ideogram - Character",
+    "model_field": "ideogram/character",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/ideogram/character.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/character-edit",
+    "category": "image",
+    "display_name": "Ideogram - Character Edit",
+    "model_field": "ideogram/character-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/ideogram/character-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/character-remix",
+    "category": "image",
+    "display_name": "Ideogram - Character Remix",
+    "model_field": "ideogram/character-remix",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/ideogram/character-remix.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/v3-edit",
+    "category": "image",
+    "display_name": "Ideogram V3 Edit",
+    "model_field": "ideogram/v3-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/ideogram/v3-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/v3-reframe",
+    "category": "image",
+    "display_name": "Ideogram / V3 Reframe",
+    "model_field": "ideogram/v3-reframe",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/v3-remix",
+    "category": "image",
+    "display_name": "Ideogram V3 Remix",
+    "model_field": "ideogram/v3-remix",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/ideogram/v3-remix.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "ideogram/v3-text-to-image",
+    "category": "image",
+    "display_name": "Ideogram V3 Text to Image",
+    "model_field": "ideogram/v3-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/ideogram/v3-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kie/image-refiner",
+    "category": "image",
+    "display_name": "Kie / Image Refiner",
+    "model_field": "kie/image-refiner",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "luma-dream-machine/ray-2-flash-reframe",
+    "category": "image",
+    "display_name": "Luma Dream Machine / Ray 2 Flash Reframe",
+    "model_field": "luma-dream-machine/ray-2-flash-reframe",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "midjourney/upscale",
+    "category": "image",
+    "display_name": "Midjourney / Upscale",
+    "model_field": "midjourney/upscale",
+    "template": "image_upscale",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "midjourney/vary",
+    "category": "image",
+    "display_name": "Midjourney / Vary",
+    "model_field": "midjourney/vary",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "nano-banana-2",
+    "category": "image",
+    "display_name": "Nano Banana 2",
+    "model_field": "nano-banana-2",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "nano-banana-pro",
+    "category": "image",
+    "display_name": "Nano Banana Pro",
+    "model_field": "nano-banana-pro",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "nano-banana-upscale",
+    "category": "image",
+    "display_name": "Nano Banana Upscale",
+    "model_field": "nano-banana-upscale",
+    "template": "image_upscale",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "qwen/image-edit",
+    "category": "image",
+    "display_name": "Qwen - Image Edit",
+    "model_field": "qwen/image-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/qwen/image-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "qwen/image-to-image",
+    "category": "image",
+    "display_name": "Qwen - Image to Image",
+    "model_field": "qwen/image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/qwen/image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "qwen/text-to-image",
+    "category": "image",
+    "display_name": "Qwen - Text to Image",
+    "model_field": "qwen/text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/qwen/text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "qwen2/image-edit",
+    "category": "image",
+    "display_name": "Qwen2 - Image Edit",
+    "model_field": "qwen2/image-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/qwen2/image-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "qwen2/text-to-image",
+    "category": "image",
+    "display_name": "Qwen2 - Text To Image",
+    "model_field": "qwen2/text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/qwen2/text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "recraft/crisp-upscale",
+    "category": "image",
+    "display_name": "Recraft - Crisp Upscale",
+    "model_field": "recraft/crisp-upscale",
+    "template": "image_upscale",
+    "docs_url": "https://docs.kie.ai/market/recraft/crisp-upscale.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "recraft/remove-background",
+    "category": "image",
+    "display_name": "Recraft - Remove Background",
+    "model_field": "recraft/remove-background",
+    "template": "image_remove_bg",
+    "docs_url": "https://docs.kie.ai/market/recraft/remove-background.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/4.5-edit",
+    "category": "image",
+    "display_name": "Seedream4.5 - Edit",
+    "model_field": "seedream/4.5-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/seedream/4-5-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/4.5-text-to-image",
+    "category": "image",
+    "display_name": "Seedream4.5 - Text to Image",
+    "model_field": "seedream/4.5-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/seedream/4-5-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/5-lite-image-to-image",
+    "category": "image",
+    "display_name": "Seedream5.0 Lite - Image to Image",
+    "model_field": "seedream/5-lite-image-to-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/seedream-5-lite-image-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/5-lite-text-to-image",
+    "category": "image",
+    "display_name": "Seedream5.0 Lite - Text to Image",
+    "model_field": "seedream/5-lite-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/seedream/5-lite-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/seedream",
+    "category": "image",
+    "display_name": "Seedream3.0 - Text to Image",
+    "model_field": "seedream/seedream",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/seedream/seedream.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/seedream-v4-edit",
+    "category": "image",
+    "display_name": "Seedream4.0 - Edit",
+    "model_field": "seedream/seedream-v4-edit",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/seedream/seedream-v4-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "seedream/seedream-v4-text-to-image",
+    "category": "image",
+    "display_name": "Seedream4.0 - Text to Image",
+    "model_field": "seedream/seedream-v4-text-to-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/seedream/seedream-v4-text-to-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "topaz/image-upscale",
+    "category": "image",
+    "display_name": "Topaz - Image Upscale",
+    "model_field": "topaz/image-upscale",
+    "template": "image_upscale",
+    "docs_url": "https://docs.kie.ai/market/topaz/image-upscale.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-7-image",
+    "category": "image",
+    "display_name": "Wan 2.7 Image",
+    "model_field": "wan/2-7-image",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/wan/2-7-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-7-image-pro",
+    "category": "image",
+    "display_name": "Wan 2.7 Image Pro",
+    "model_field": "wan/2-7-image-pro",
+    "template": "image_i2i",
+    "docs_url": "https://docs.kie.ai/market/wan/2-7-image-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-7-image-to-video",
+    "category": "image",
+    "display_name": "Wan 2.7 - Image to Video",
+    "model_field": "wan/2-7-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-7-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "z-image",
+    "category": "image",
+    "display_name": "Z Image",
+    "model_field": "z-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "z-image/z-image",
+    "category": "image",
+    "display_name": "Z-Image",
+    "model_field": "z-image/z-image",
+    "template": "image_t2i",
+    "docs_url": "https://docs.kie.ai/market/z-image/z-image.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/omni-human",
+    "category": "video",
+    "display_name": "Bytedance / Omni Human",
+    "model_field": "bytedance/omni-human",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-1.5-pro",
+    "category": "video",
+    "display_name": "Bytedance Seedance 1.5 Pro",
+    "model_field": "bytedance/seedance-1.5-pro",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/seedance-1-5-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-2",
+    "category": "video",
+    "display_name": "bytedance-seedance-2",
+    "model_field": "bytedance/seedance-2",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/seedance-2.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-2-asset",
+    "category": "video",
+    "display_name": "Bytedance / Seedance 2 Asset",
+    "model_field": "bytedance/seedance-2-asset",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-2-fast",
+    "category": "video",
+    "display_name": "Bytedance Seedance 2.0 Fast",
+    "model_field": "bytedance/seedance-2-fast",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/seedance-2-fast.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-2-image-to-video",
+    "category": "video",
+    "display_name": "Bytedance / Seedance 2 Image To Video",
+    "model_field": "bytedance/seedance-2-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-2-mini",
+    "category": "video",
+    "display_name": "Bytedance Seedance 2.0 Mini",
+    "model_field": "bytedance/seedance-2-mini",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/seedance-2-mini.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/seedance-2-text-to-video",
+    "category": "video",
+    "display_name": "Bytedance / Seedance 2 Text To Video",
+    "model_field": "bytedance/seedance-2-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/v1-lite-image-to-video",
+    "category": "video",
+    "display_name": "Bytedance - V1 Lite Image to Video",
+    "model_field": "bytedance/v1-lite-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/v1-lite-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/v1-lite-text-to-video",
+    "category": "video",
+    "display_name": "Bytedance - V1 Lite Text to Video",
+    "model_field": "bytedance/v1-lite-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/v1-lite-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/v1-pro-fast-image-to-video",
+    "category": "video",
+    "display_name": "Bytedance V1 Pro Fast Image to Video",
+    "model_field": "bytedance/v1-pro-fast-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/v1-pro-fast-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/v1-pro-image-to-video",
+    "category": "video",
+    "display_name": "Bytedance V1 Pro Image to Video",
+    "model_field": "bytedance/v1-pro-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/v1-pro-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "bytedance/v1-pro-text-to-video",
+    "category": "video",
+    "display_name": "Bytedance - V1 Pro Text to Video",
+    "model_field": "bytedance/v1-pro-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/bytedance/v1-pro-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "google/gemini-2.0-flash-exp",
+    "category": "video",
+    "display_name": "Google / Gemini 2.0 Flash Exp",
+    "model_field": "google/gemini-2.0-flash-exp",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine-video-1-5-preview",
+    "category": "video",
+    "display_name": "Grok Imagine Video 1 5 Preview",
+    "model_field": "grok-imagine-video-1-5-preview",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine-video-1-5-preview-extend",
+    "category": "video",
+    "display_name": "Grok Imagine Video 1 5 Preview Extend",
+    "model_field": "grok-imagine-video-1-5-preview-extend",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/1-5-preview",
+    "category": "video",
+    "display_name": "Grok Imagine Video 1.5 Preview",
+    "model_field": "grok-imagine/1-5-preview",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/1-5-preview.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/extend",
+    "category": "video",
+    "display_name": "Grok Imagine - Video Extend",
+    "model_field": "grok-imagine/extend",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/extend.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/image-to-video",
+    "category": "video",
+    "display_name": "Grok Imagine Image to Video",
+    "model_field": "grok-imagine/image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "grok-imagine/text-to-video",
+    "category": "video",
+    "display_name": "Grok Imagine Text to Video",
+    "model_field": "grok-imagine/text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/grok-imagine/text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "hailuo/02-image-to-video-pro",
+    "category": "video",
+    "display_name": "Hailuo Pro Image to Video",
+    "model_field": "hailuo/02-image-to-video-pro",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/hailuo/02-image-to-video-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "hailuo/02-image-to-video-standard",
+    "category": "video",
+    "display_name": "Hailuo Standard Image to Video",
+    "model_field": "hailuo/02-image-to-video-standard",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/hailuo/02-image-to-video-standard.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "hailuo/02-text-to-video-pro",
+    "category": "video",
+    "display_name": "Hailuo Pro Text to Video",
+    "model_field": "hailuo/02-text-to-video-pro",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/hailuo/02-text-to-video-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "hailuo/02-text-to-video-standard",
+    "category": "video",
+    "display_name": "Hailuo Standard Text to Video",
+    "model_field": "hailuo/02-text-to-video-standard",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/hailuo/02-text-to-video-standard.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "hailuo/2-3-image-to-video-pro",
+    "category": "video",
+    "display_name": "Hailuo 2.3 Pro Image to Video",
+    "model_field": "hailuo/2-3-image-to-video-pro",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/hailuo/2-3-image-to-video-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "hailuo/2-3-image-to-video-standard",
+    "category": "video",
+    "display_name": "Hailuo 2.3 Standard Image to Video",
+    "model_field": "hailuo/2-3-image-to-video-standard",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/hailuo/2-3-image-to-video-standard.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse-1-1/image-to-video",
+    "category": "video",
+    "display_name": "HappyHorse-1-1 image-to-video",
+    "model_field": "happyhorse-1-1/image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse-1-1/image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse-1-1/reference-to-video",
+    "category": "video",
+    "display_name": "HappyHorse-1-1 reference-to-video",
+    "model_field": "happyhorse-1-1/reference-to-video",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse-1-1/reference-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse-1-1/text-to-video",
+    "category": "video",
+    "display_name": "HappyHorse-1-1 text-to-video",
+    "model_field": "happyhorse-1-1/text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse-1-1/text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse/image-to-video",
+    "category": "video",
+    "display_name": "happyhorse-image-to-video",
+    "model_field": "happyhorse/image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse/image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse/reference-to-video",
+    "category": "video",
+    "display_name": "happyhorse/reference-to-video",
+    "model_field": "happyhorse/reference-to-video",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse/reference-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse/text-to-video",
+    "category": "video",
+    "display_name": "happyhorse-text-to-video",
+    "model_field": "happyhorse/text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse/text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "happyhorse/video-edit",
+    "category": "video",
+    "display_name": "happyhorse/video-edit",
+    "model_field": "happyhorse/video-edit",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/happyhorse/video-edit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "infinitalk/from-audio",
+    "category": "video",
+    "display_name": "Infinitalk - From Audio",
+    "model_field": "infinitalk/from-audio",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/infinitalk/from-audio.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "infinitalk/from-text",
+    "category": "video",
+    "display_name": "Infinitalk / From Text",
+    "model_field": "infinitalk/from-text",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-2.6/image-to-video",
+    "category": "video",
+    "display_name": "Kling 2.6 Image to Video",
+    "model_field": "kling-2.6/image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/kling/image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-2.6/motion-control",
+    "category": "video",
+    "display_name": "Kling 2.6 / Motion Control",
+    "model_field": "kling-2.6/motion-control",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-2.6/text-to-video",
+    "category": "video",
+    "display_name": "Kling 2.6 Text to Video",
+    "model_field": "kling-2.6/text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-3.0/motion-control",
+    "category": "video",
+    "display_name": "Kling 3.0 / Motion Control",
+    "model_field": "kling-3.0/motion-control",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-3.0/video",
+    "category": "video",
+    "display_name": "Kling 3.0 / Video",
+    "model_field": "kling-3.0/video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-o1/kling-hig-image-omni-flf-o1",
+    "category": "video",
+    "display_name": "Kling O1 / Kling Hig Image Omni Flf O1",
+    "model_field": "kling-o1/kling-hig-image-omni-flf-o1",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-o1/kling-hig-image-reference-o1",
+    "category": "video",
+    "display_name": "Kling O1 / Kling Hig Image Reference O1",
+    "model_field": "kling-o1/kling-hig-image-reference-o1",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-o1/kling-hig-video-edit-o1",
+    "category": "video",
+    "display_name": "Kling O1 / Kling Hig Video Edit O1",
+    "model_field": "kling-o1/kling-hig-video-edit-o1",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling-o1/kling-hig-video-reference-o1",
+    "category": "video",
+    "display_name": "Kling O1 / Kling Hig Video Reference O1",
+    "model_field": "kling-o1/kling-hig-video-reference-o1",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/ai-avatar-pro",
+    "category": "video",
+    "display_name": "Kling AI Avatar Pro",
+    "model_field": "kling/ai-avatar-pro",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/kling/ai-avatar-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/ai-avatar-standard",
+    "category": "video",
+    "display_name": "Kling AI Avatar Standard",
+    "model_field": "kling/ai-avatar-standard",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/kling/ai-avatar-standard.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/ai-avatar-v1-pro",
+    "category": "video",
+    "display_name": "Kling / Ai Avatar V1 Pro",
+    "model_field": "kling/ai-avatar-v1-pro",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/kling-3-0",
+    "category": "video",
+    "display_name": "Kling 3.0",
+    "model_field": "kling/kling-3-0",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/kling-3-0.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/motion-control",
+    "category": "video",
+    "display_name": "Kling 2.6 motion-control",
+    "model_field": "kling/motion-control",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/kling/motion-control.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/motion-control-v3",
+    "category": "video",
+    "display_name": "Kling-3.0 motion-control",
+    "model_field": "kling/motion-control-v3",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/kling/motion-control-v3.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v1-avatar-standard",
+    "category": "video",
+    "display_name": "Kling / V1 Avatar Standard",
+    "model_field": "kling/v1-avatar-standard",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v2-1-master-image-to-video",
+    "category": "video",
+    "display_name": "Kling V2.1 Master Image to Video",
+    "model_field": "kling/v2-1-master-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v2-1-master-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v2-1-master-text-to-video",
+    "category": "video",
+    "display_name": "Kling V2.1 Master Text to Video",
+    "model_field": "kling/v2-1-master-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v2-1-master-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v2-1-pro",
+    "category": "video",
+    "display_name": "Kling V2.1 Pro",
+    "model_field": "kling/v2-1-pro",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v2-1-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v2-1-standard",
+    "category": "video",
+    "display_name": "Kling V2.1 Standard",
+    "model_field": "kling/v2-1-standard",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v2-1-standard.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v2-5-turbo-image-to-video-pro",
+    "category": "video",
+    "display_name": "Kling - V2.5 Turbo Image to Video Pro",
+    "model_field": "kling/v2-5-turbo-image-to-video-pro",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v25-turbo-image-to-video-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v2-5-turbo-text-to-video-pro",
+    "category": "video",
+    "display_name": "Kling - V2.5 Turbo Text to Video Pro",
+    "model_field": "kling/v2-5-turbo-text-to-video-pro",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v25-turbo-text-to-video-pro.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v3-turbo-image-to-video",
+    "category": "video",
+    "display_name": "Kling - V3 Turbo Image to Video",
+    "model_field": "kling/v3-turbo-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v3-turbo-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "kling/v3-turbo-text-to-video",
+    "category": "video",
+    "display_name": "Kling - V3 Turbo Text to Video",
+    "model_field": "kling/v3-turbo-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/kling/v3-turbo-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "luma-dream-machine/modify",
+    "category": "video",
+    "display_name": "Luma Dream Machine / Modify",
+    "model_field": "luma-dream-machine/modify",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "midjourney/extend",
+    "category": "video",
+    "display_name": "Midjourney / Extend",
+    "model_field": "midjourney/extend",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "omnihuman-1-5",
+    "category": "video",
+    "display_name": "Omnihuman 1.5",
+    "model_field": "omnihuman-1-5",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/omnihuman-1-5.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "omnihuman-1-5/human-identification",
+    "category": "video",
+    "display_name": "Omnihuman 1 5 / Human Identification",
+    "model_field": "omnihuman-1-5/human-identification",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "omnihuman-1-5/subject-detection",
+    "category": "video",
+    "display_name": "Omnihuman 1 5 / Subject Detection",
+    "model_field": "omnihuman-1-5/subject-detection",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "runway/aleph",
+    "category": "video",
+    "display_name": "Generate Aleph Video",
+    "model_field": "runway/aleph",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/runway-api/generate-aleph-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "runway/extend",
+    "category": "video",
+    "display_name": "Extend AI Video",
+    "model_field": "runway/extend",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/runway-api/extend-ai-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "runway/generate",
+    "category": "video",
+    "display_name": "Generate AI Video",
+    "model_field": "runway/generate",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/runway-api/generate-ai-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-characters",
+    "category": "video",
+    "display_name": "Sora 2 Characters",
+    "model_field": "sora-2-characters",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-characters-pro",
+    "category": "video",
+    "display_name": "Sora 2 Characters Pro",
+    "model_field": "sora-2-characters-pro",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-image-to-video",
+    "category": "video",
+    "display_name": "Sora 2 Image To Video",
+    "model_field": "sora-2-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-image-to-video-stable",
+    "category": "video",
+    "display_name": "Sora 2 Image To Video Stable",
+    "model_field": "sora-2-image-to-video-stable",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-pro-image-to-video",
+    "category": "video",
+    "display_name": "Sora 2 Pro Image To Video",
+    "model_field": "sora-2-pro-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-pro-storyboard",
+    "category": "video",
+    "display_name": "Sora 2 Pro Storyboard",
+    "model_field": "sora-2-pro-storyboard",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-pro-text-to-video",
+    "category": "video",
+    "display_name": "Sora 2 Pro Text To Video",
+    "model_field": "sora-2-pro-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-text-to-video",
+    "category": "video",
+    "display_name": "Sora 2 Text To Video",
+    "model_field": "sora-2-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-2-text-to-video-stable",
+    "category": "video",
+    "display_name": "Sora 2 Text To Video Stable",
+    "model_field": "sora-2-text-to-video-stable",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora-watermark-remover",
+    "category": "video",
+    "display_name": "Sora Watermark Remover",
+    "model_field": "sora-watermark-remover",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "sora2-remix",
+    "category": "video",
+    "display_name": "Sora2 Remix",
+    "model_field": "sora2-remix",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "topaz/video-upscale",
+    "category": "video",
+    "display_name": "Topaz - Video Upscale",
+    "model_field": "topaz/video-upscale",
+    "template": "image_upscale",
+    "docs_url": "https://docs.kie.ai/market/topaz/video-upscale.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "v3-api",
+    "category": "video",
+    "display_name": "V3 Api",
+    "model_field": "v3-api",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "volcengine/video-to-video-lip-sync",
+    "category": "video",
+    "display_name": "Volcengine video to video lip sync",
+    "model_field": "volcengine/video-to-video-lip-sync",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/volcengine/video-to-video-lip-sync.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-2-a14b-image-to-video-turbo",
+    "category": "video",
+    "display_name": "Wan - Image to Video",
+    "model_field": "wan/2-2-a14b-image-to-video-turbo",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-2-a14b-image-to-video-turbo.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-2-a14b-speech-to-video-turbo",
+    "category": "video",
+    "display_name": "Wan - 2.2 A14B Speech to Video Turbo",
+    "model_field": "wan/2-2-a14b-speech-to-video-turbo",
+    "template": "video_audio_avatar",
+    "docs_url": "https://docs.kie.ai/market/wan/2-2-a14b-speech-to-video-turbo.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-2-a14b-text-to-video-turbo",
+    "category": "video",
+    "display_name": "Wan - Text to Video",
+    "model_field": "wan/2-2-a14b-text-to-video-turbo",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-2-a14b-text-to-video-turbo.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-2-animate-move",
+    "category": "video",
+    "display_name": "Wan - Animate Move",
+    "model_field": "wan/2-2-animate-move",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-2-animate-move.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-2-animate-replace",
+    "category": "video",
+    "display_name": "Wan - Animate Replace",
+    "model_field": "wan/2-2-animate-replace",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-2-animate-replace.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-5-image-to-video",
+    "category": "video",
+    "display_name": "Wan 2.5 - Image to Video",
+    "model_field": "wan/2-5-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-5-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-5-text-to-video",
+    "category": "video",
+    "display_name": "Wan 2.5 - Text to Video",
+    "model_field": "wan/2-5-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-5-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-6-flash-image-to-video",
+    "category": "video",
+    "display_name": "Wan - 2.6-flash-image-to-video",
+    "model_field": "wan/2-6-flash-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-6-flash-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-6-flash-video-to-video",
+    "category": "video",
+    "display_name": "Wan - 2-6-flash-video-to-video",
+    "model_field": "wan/2-6-flash-video-to-video",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-6-flash-video-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-6-image-to-video",
+    "category": "video",
+    "display_name": "Wan 2.6 - Image to Video",
+    "model_field": "wan/2-6-image-to-video",
+    "template": "video_i2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-6-image-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-6-text-to-video",
+    "category": "video",
+    "display_name": "Wan 2.6 - Text to Video",
+    "model_field": "wan/2-6-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-6-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-6-video-to-video",
+    "category": "video",
+    "display_name": "Wan 2.6 - Video to Video",
+    "model_field": "wan/2-6-video-to-video",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-6-video-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-7-r2v",
+    "category": "video",
+    "display_name": "Wan 2.7 - Reference to Video",
+    "model_field": "wan/2-7-r2v",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-7-r2v.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-7-text-to-video",
+    "category": "video",
+    "display_name": "Wan 2.7 - Text to Video",
+    "model_field": "wan/2-7-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-7-text-to-video.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wan/2-7-videoedit",
+    "category": "video",
+    "display_name": "Wan 2.7 - Video Edit",
+    "model_field": "wan/2-7-videoedit",
+    "template": "video_v2v",
+    "docs_url": "https://docs.kie.ai/market/wan/2-7-videoedit.md",
+    "api_type": "jobs"
+  },
+  {
+    "id": "wantest/2-5-text-to-video",
+    "category": "video",
+    "display_name": "Wantest / 2 5 Text To Video",
+    "model_field": "wantest/2-5-text-to-video",
+    "template": "video_t2v",
+    "docs_url": "https://docs.kie.ai/market/quickstart.md",
+    "api_type": "jobs"
+  }
+]
