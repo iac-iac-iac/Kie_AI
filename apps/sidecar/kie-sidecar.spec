@@ -2,8 +2,31 @@
 
 from pathlib import Path
 
+from PyInstaller.utils.hooks import collect_submodules
+
 block_cipher = None
 root = Path(SPECPATH)
+
+hiddenimports = (
+    collect_submodules("uvicorn")
+    + collect_submodules("fastapi")
+    + collect_submodules("starlette")
+    + collect_submodules("anyio")
+    + collect_submodules("httpx")
+    + collect_submodules("pydantic")
+    + collect_submodules("pydantic_settings")
+    + collect_submodules("aiosqlite")
+    + collect_submodules("structlog")
+    + [
+        "uvicorn",
+        "uvicorn.main",
+        "uvicorn.config",
+        "uvicorn.importer",
+        "multipart",
+        "python_multipart",
+        "socksio",
+    ]
+)
 
 a = Analysis(
     [str(root / "kie_sidecar" / "__main__.py")],
@@ -13,22 +36,7 @@ a = Analysis(
         (str(root / "kie_sidecar" / "models" / "registry"), "kie_sidecar/models/registry"),
         (str(root / "kie_sidecar" / "db" / "schema.sql"), "kie_sidecar/db"),
     ],
-    hiddenimports=[
-        "uvicorn.logging",
-        "uvicorn.loops",
-        "uvicorn.loops.auto",
-        "uvicorn.protocols",
-        "uvicorn.protocols.http",
-        "uvicorn.protocols.http.auto",
-        "uvicorn.protocols.websockets",
-        "uvicorn.protocols.websockets.auto",
-        "uvicorn.lifespan",
-        "uvicorn.lifespan.on",
-        "httpx",
-        "httpx._transports",
-        "httpx._transports.default",
-        "socksio",
-    ],
+    hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
