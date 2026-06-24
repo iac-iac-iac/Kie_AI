@@ -35,8 +35,14 @@ Thumbs.db
 .cursor/
 *.plan.md
 
-# Catalog dumps (regenerate via scripts)
+# Catalog dumps (regenerate via scripts; keep only pipeline inputs)
 apps/sidecar/catalog/model_pricing_all.json
+apps/sidecar/catalog/full_catalog.json
+apps/sidecar/catalog/llms_models.json
+apps/sidecar/catalog/*.txt
+apps/sidecar/catalog/providers.json
+apps/sidecar/catalog/market_groups.json
+apps/sidecar/catalog/suno_group.json
 
 # Playwright MCP
 .playwright-mcp/

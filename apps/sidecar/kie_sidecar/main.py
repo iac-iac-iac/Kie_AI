@@ -11,6 +11,7 @@ import tempfile
 import structlog
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 
 from kie_sidecar.api import account, chats, events, generations, models, settings, system
@@ -21,6 +22,27 @@ from kie_sidecar.state import AppState, create_app_state
 logger = structlog.get_logger()
 
 PRICING_SYNC_INTERVAL_SEC = 24 * 60 * 60
+PRICING_DIR = Path(__file__).resolve().parent.parent / "pricing"
+
+
+def _client_is_local(request: Request) -> bool:
+    if not request.client:
+        return False
+    host = request.client.host
+    if host in {"127.0.0.1", "::1", "localhost", "testclient"}:
+        return True
+    header_host = request.headers.get("host", "").split(":")[0].lower()
+    return header_host in {"127.0.0.1", "localhost", "::1"}
+
+
+def _resolve_pricing_overrides(path_str: str) -> Path:
+    path = Path(path_str).resolve()
+    pricing_root = PRICING_DIR.resolve()
+    if not str(path).startswith(str(pricing_root)):
+        raise HTTPException(status_code=400, detail="overrides_path must be under pricing/")
+    if not path.is_file():
+        raise HTTPException(status_code=404, detail="overrides file not found")
+    return path
 
 
 class HealthResponse(BaseModel):
@@ -132,6 +154,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.middleware("http")
+async def restrict_internal_routes(request: Request, call_next):
+    if request.url.path.startswith("/internal/") and not _client_is_local(request):
+        return JSONResponse(status_code=403, content={"detail": "Forbidden"})
+    return await call_next(request)
+
 app.include_router(settings.router, prefix="/api/v1")
 app.include_router(account.router, prefix="/api/v1")
 app.include_router(chats.router, prefix="/api/v1")
@@ -181,7 +210,11 @@ async def sync_pricing_endpoint(
     body: SyncPricingRequest | None = None,
 ) -> SyncPricingResponse:
     state: AppState = request.app.state.app_state
-    overrides_path = Path(body.overrides_path) if body and body.overrides_path else None
+    overrides_path = (
+        _resolve_pricing_overrides(body.overrides_path)
+        if body and body.overrides_path
+        else None
+    )
     result = await sync_pricing(state.models_cache_repo, overrides_path)
     return SyncPricingResponse(
         seeded=int(result["seeded"]),

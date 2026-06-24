@@ -1,6 +1,5 @@
 import { NavLink, Outlet, Navigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Card } from "../../components/ui/Card";
 import { cn } from "../../lib/utils";
 import { SettingsFormProvider } from "./useSettingsForm";
 
@@ -50,14 +49,5 @@ export function SettingsLayout() {
         </div>
       </div>
     </SettingsFormProvider>
-  );
-}
-
-export function SettingsTabLoading() {
-  const { t } = useTranslation();
-  return (
-    <Card>
-      <p className="text-muted">{t("balance.loading")}</p>
-    </Card>
   );
 }

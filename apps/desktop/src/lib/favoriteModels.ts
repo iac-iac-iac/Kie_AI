@@ -20,10 +20,6 @@ function write(ids: string[]) {
   }
 }
 
-export function getFavorites(): string[] {
-  return readRaw();
-}
-
 export function isFavorite(modelId: string): boolean {
   return readRaw().includes(modelId);
 }
@@ -34,17 +30,6 @@ export function toggleFavorite(modelId: string): boolean {
   const next = exists ? current.filter((id) => id !== modelId) : [...current, modelId];
   write(next);
   return !exists;
-}
-
-export function sortFavoritesFirst<T extends { id: string }>(models: T[]): T[] {
-  const favSet = new Set(readRaw());
-  const favorites: T[] = [];
-  const rest: T[] = [];
-  for (const model of models) {
-    if (favSet.has(model.id)) favorites.push(model);
-    else rest.push(model);
-  }
-  return [...favorites, ...rest];
 }
 
 export function groupWithFavorites<T extends { id: string }>(

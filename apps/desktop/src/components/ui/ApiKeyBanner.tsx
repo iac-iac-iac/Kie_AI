@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { apiLockMessageKey, useApiReady } from "../../hooks/useHasApiKey";
+import { apiLockMessageKey, useApiReady } from "../../hooks/useApiReady";
 
 export function ApiKeyBanner() {
   const { t } = useTranslation();

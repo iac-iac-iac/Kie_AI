@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { groupWithFavorites } from "../../lib/favoriteModels";
 import { formatModelLabel } from "../../lib/modelCapabilities";
 import { cn } from "../../lib/utils";
-import type { ModelPickerItem } from "../ui/ModelPicker";
+import type { ModelPickerItem } from "./modelPickerItem";
 import { FavoriteStar } from "../ui/FavoriteStar";
 import { getModelFamily } from "../ui/modelFamilies";
 

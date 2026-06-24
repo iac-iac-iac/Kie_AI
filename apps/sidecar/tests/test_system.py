@@ -21,6 +21,14 @@ def test_system_paths(client, temp_data_dir):
     assert str(temp_data_dir) in data["data_dir"]
 
 
+def test_sync_pricing_rejects_outside_overrides(client):
+    response = client.post(
+        "/internal/sync-pricing",
+        json={"overrides_path": "C:\\Windows\\System32\\drivers\\etc\\hosts"},
+    )
+    assert response.status_code == 400
+
+
 def test_checkpoint_db_creates_snapshot(client, temp_data_dir):
     response = client.post("/internal/checkpoint-db")
     assert response.status_code == 200

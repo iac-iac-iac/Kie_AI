@@ -2,7 +2,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { api, ApiError } from "../../lib/api";
 import { isSseDegraded } from "../../lib/events";
-import { useApiReady } from "../../hooks/useHasApiKey";
+import { useApiReady } from "../../hooks/useApiReady";
 import { Button } from "../../components/ui/Button";
 
 export function BalanceBar() {

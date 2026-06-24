@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 import { formatModelLabel } from "../../lib/modelCapabilities";
-import type { ModelPickerItem } from "../ui/ModelPicker";
+import type { ModelPickerItem } from "./modelPickerItem";
 import { Button } from "../ui/Button";
 
 export type ModelCatalogCategory = "image" | "video" | "audio";

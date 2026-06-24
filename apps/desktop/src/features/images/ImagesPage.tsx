@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../../components/ui/Button";
 import { Card } from "../../components/ui/Card";
-import { apiLockMessageKey, useApiReady } from "../../hooks/useHasApiKey";
+import { apiLockMessageKey, useApiReady } from "../../hooks/useApiReady";
 import { useHotkeys } from "../../hooks/useHotkeys";
 import { buildDraftFromGeneration, type GenerationDraft } from "../../lib/generationDraft";
 import { GenerationPanel } from "./components/GenerationPanel";

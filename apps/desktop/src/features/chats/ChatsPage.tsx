@@ -9,7 +9,7 @@ import { exportChatToFile } from "../../lib/exportChat";
 import { formatModelLabel } from "../../lib/modelCapabilities";
 import { showToast } from "../../lib/toast";
 import { useDebouncedValue } from "../../hooks/useDebouncedValue";
-import { apiLockMessageKey, useApiReady } from "../../hooks/useHasApiKey";
+import { apiLockMessageKey, useApiReady } from "../../hooks/useApiReady";
 import { useHotkeys } from "../../hooks/useHotkeys";
 import { ChatComposer } from "./components/ChatComposer";
 import { ChatSidebar } from "./components/ChatSidebar";

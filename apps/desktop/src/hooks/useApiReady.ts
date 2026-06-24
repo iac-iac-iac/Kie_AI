@@ -68,9 +68,3 @@ export function useApiReady() {
 
   return { isReady, isLoading, lockReason, hasKey };
 }
-
-/** Models/features gate: key saved in app and kie.ai accepts it. */
-export function useHasApiKey() {
-  const { isReady, isLoading } = useApiReady();
-  return { data: isReady, isLoading };
-}

@@ -43,6 +43,28 @@ fn checkpoint_db(sidecar_url: &str) -> Result<PathBuf, String> {
     Ok(PathBuf::from(snapshot))
 }
 
+fn safe_relative_path(base: &Path, relative: &str) -> Result<PathBuf, String> {
+    let rel = Path::new(relative);
+    if rel.is_absolute() {
+        return Err("Invalid path in backup archive".to_string());
+    }
+    for component in rel.components() {
+        if matches!(component, std::path::Component::ParentDir) {
+            return Err("Path traversal in backup archive".to_string());
+        }
+    }
+    let joined = base.join(rel);
+    let base_canon = fs::canonicalize(base).map_err(|e| e.to_string())?;
+    if let Some(parent) = joined.parent() {
+        fs::create_dir_all(parent).map_err(|e| e.to_string())?;
+    }
+    let joined_canon = joined.canonicalize().map_err(|e| e.to_string())?;
+    if !joined_canon.starts_with(&base_canon) {
+        return Err("Path escapes media directory".to_string());
+    }
+    Ok(joined)
+}
+
 fn add_dir_to_zip(
     zip: &mut ZipWriter<File>,
     dir: &Path,
@@ -197,10 +219,7 @@ pub fn import_backup(src_path: &str, app: &AppHandle) -> Result<(), String> {
                 continue;
             }
             let relative = name.trim_start_matches("media/");
-            let out_path = media_dir.join(relative);
-            if let Some(parent) = out_path.parent() {
-                fs::create_dir_all(parent).map_err(|e| e.to_string())?;
-            }
+            let out_path = safe_relative_path(&media_dir, relative)?;
             let mut out = File::create(&out_path).map_err(|e| e.to_string())?;
             std::io::copy(&mut entry, &mut out).map_err(|e| e.to_string())?;
         }

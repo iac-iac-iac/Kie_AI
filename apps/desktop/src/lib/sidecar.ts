@@ -14,7 +14,3 @@ export async function getSidecarUrl(): Promise<string> {
   }
   return cachedUrl!;
 }
-
-export function resetSidecarUrlCache(): void {
-  cachedUrl = null;
-}

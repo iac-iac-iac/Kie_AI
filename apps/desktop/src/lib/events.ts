@@ -31,13 +31,8 @@ type SidecarEventHandlers = SidecarEventHandler;
 const MAX_RECONNECT_FAILURES = 3;
 const BASE_RECONNECT_MS = 1000;
 
-let sseConnected = false;
 let sseDegraded = false;
 let reconnectFailures = 0;
-
-export function isSseConnected(): boolean {
-  return sseConnected;
-}
 
 export function isSseDegraded(): boolean {
   return sseDegraded;
@@ -95,7 +90,6 @@ export function connectSidecarEvents(
           throw new Error(`SSE failed: ${response.status}`);
         }
 
-        sseConnected = true;
         sseDegraded = false;
         reconnectFailures = 0;
         handlers.onConnect?.();
@@ -124,7 +118,6 @@ export function connectSidecarEvents(
         }
       } catch {
         if (cancelled || signal?.aborted) break;
-        sseConnected = false;
         handlers.onDisconnect?.();
         reconnectFailures += 1;
         if (reconnectFailures >= MAX_RECONNECT_FAILURES) {
@@ -135,15 +128,7 @@ export function connectSidecarEvents(
         await new Promise((r) => setTimeout(r, delay));
       }
     }
-
-    sseConnected = false;
   };
 
   void run();
-}
-
-export function resetSseStateForTests(): void {
-  sseConnected = false;
-  sseDegraded = false;
-  reconnectFailures = 0;
 }
