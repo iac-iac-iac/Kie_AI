@@ -19,7 +19,7 @@ try {
     Pop-Location
 }
 
-$builtExe = Join-Path $SidecarDir "dist\kie-sidecar\kie-sidecar.exe"
+$builtExe = Join-Path $SidecarDir "dist\kie-sidecar.exe"
 if (-not (Test-Path $builtExe)) {
     throw "Expected sidecar binary at $builtExe"
 }

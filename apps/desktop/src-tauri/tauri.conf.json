@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Kie AI Desktop",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "identifier": "com.mita.kie-ai",
   "build": {
     "beforeDevCommand": "npm run dev",
@@ -26,7 +26,7 @@
   },
   "plugins": {
     "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDEyQzJCQzI5NkE5RTQzOTYKUldTV1E1NXFLYnpDRW04bE90eHlFaHRVZVMveWRiS1RoaHNySXU0Y1NNNVZabTc1WFJNdGhtMEoK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDUzNzI0RjU3NjVBMTVCNkEKUldScVc2RmxWMDl5VTduaE5sMTlaOHNrT3BMaFF1Yi9tWlRFZlhPdGd3RnU4amRjUGl1a01UUTIK",
       "endpoints": [
         "https://github.com/iac-iac-iac/Kie_AI/releases/latest/download/latest.json"
       ]

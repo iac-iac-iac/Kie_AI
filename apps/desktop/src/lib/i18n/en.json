@@ -1,6 +1,10 @@
 {
   "app": {
-    "title": "Kie AI Desktop"
+    "title": "Kie AI Desktop",
+    "startingSidecar": "Starting service…",
+    "startingSidecarHint": "First launch may take 1–2 minutes. Please keep the window open.",
+    "sidecarTimeout": "Service failed to start",
+    "sidecarTimeoutHint": "Restart the app. If it keeps failing, reinstall from the latest release."
   },
   "window": {
     "minimize": "Minimize",
@@ -209,7 +213,7 @@
     "dismiss": "Dismiss",
     "retry": "Retry",
     "creating": "Creating…",
-    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorSidecar": "Service unavailable. Restart the app or click Retry.",
     "errorNoModels": "Chat models failed to load. Restart the app.",
     "errorCreate": "Failed to create chat",
     "search": "Search chats…",
@@ -246,7 +250,7 @@
     "emptyGallery": "No images yet. Create your first!",
     "newGeneration": "New generation",
     "noPreview": "No preview",
-    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorSidecar": "Service unavailable. Restart the app or click Retry.",
     "errorNoKey": "Set API key in Settings",
     "errorGenerate": "Failed to start generation",
     "errorUnknown": "Could not download the image. Check proxy in Settings and try again.",
@@ -283,7 +287,7 @@
     "emptyGallery": "No videos yet. Create your first!",
     "newGeneration": "New generation",
     "noPreview": "No preview",
-    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorSidecar": "Service unavailable. Restart the app or click Retry.",
     "errorNoKey": "Set API key in Settings",
     "errorGenerate": "Failed to start generation",
     "errorUnknown": "Could not download the video. Check proxy in Settings and try again.",
@@ -311,7 +315,7 @@
     "emptyGallery": "No tracks yet. Create your first!",
     "newGeneration": "New generation",
     "noPreview": "No preview",
-    "errorSidecar": "Sidecar is outdated or not running. Restart: .\\scripts\\dev.ps1",
+    "errorSidecar": "Service unavailable. Restart the app or click Retry.",
     "errorNoKey": "Set API key in Settings",
     "errorGenerate": "Failed to start generation",
     "errorUnknown": "Could not download the audio. Check proxy in Settings and try again.",

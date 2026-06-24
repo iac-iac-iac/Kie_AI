@@ -10,6 +10,7 @@ import { UpdateBanner } from "../../components/ui/UpdateBanner";
 import { ThemeToggle } from "../../components/ui/ThemeToggle";
 import { useHotkeys } from "../../hooks/useHotkeys";
 import { useSidecarEvents } from "../../hooks/useSidecarEvents";
+import { useSidecarReady } from "../../hooks/useSidecarReady";
 import { cn } from "../../lib/utils";
 
 const tabs = [
@@ -23,6 +24,8 @@ const tabs = [
 export function AppShell() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { ready: sidecarReady, starting: sidecarStarting, timedOut: sidecarTimedOut } =
+    useSidecarReady();
 
   useSidecarEvents();
 
@@ -37,6 +40,27 @@ export function AppShell() {
   return (
     <div className="flex h-full flex-col">
       <CustomTitleBar />
+
+      {(sidecarStarting || sidecarTimedOut) && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-primary)]/90 backdrop-blur-sm">
+          <div className="glass-panel max-w-md rounded-2xl border border-[var(--glass-border)] p-8 text-center">
+            {sidecarStarting ? (
+              <>
+                <p className="text-lg font-medium text-primary">{t("app.startingSidecar")}</p>
+                <p className="mt-2 text-sm text-muted">{t("app.startingSidecarHint")}</p>
+              </>
+            ) : (
+              <>
+                <p className="text-lg font-medium text-status-error">{t("app.sidecarTimeout")}</p>
+                <p className="mt-2 text-sm text-muted">{t("app.sidecarTimeoutHint")}</p>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
+      {sidecarReady && (
+        <>
 
       <header className="glass-panel mx-4 flex items-center justify-between rounded-b-2xl border border-t-0 border-[var(--glass-border)] px-6 py-3">
         <nav className="flex gap-1">
@@ -73,6 +97,8 @@ export function AppShell() {
       <SessionLimitBar />
       <Toast />
       <OnboardingModal />
+        </>
+      )}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 use std::path::PathBuf;
-use std::time::Duration;
+use std::time::{Duration, Instant};
 
 use tauri::AppHandle;
 use tauri_plugin_shell::process::CommandEvent;
@@ -52,6 +52,25 @@ pub fn stop_sidecar() -> Result<(), String> {
     Ok(())
 }
 
+fn sidecar_ready_timeout() -> Duration {
+    if cfg!(debug_assertions) {
+        Duration::from_secs(15)
+    } else {
+        Duration::from_secs(120)
+    }
+}
+
+fn wait_for_sidecar_healthy(url: &str) -> bool {
+    let deadline = Instant::now() + sidecar_ready_timeout();
+    while Instant::now() < deadline {
+        if sidecar_is_healthy(url) {
+            return true;
+        }
+        std::thread::sleep(Duration::from_millis(500));
+    }
+    false
+}
+
 pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
     let url = sidecar_url();
     if sidecar_is_healthy(&url) {
@@ -89,11 +108,8 @@ pub fn ensure_sidecar_started(app: &AppHandle) -> Result<(), String> {
         }
     });
 
-    for _ in 0..40 {
-        if sidecar_is_healthy(&url) {
-            return Ok(());
-        }
-        std::thread::sleep(Duration::from_millis(250));
+    if wait_for_sidecar_healthy(&url) {
+        return Ok(());
     }
 
     Err(format!("Sidecar did not become ready at {url}"))

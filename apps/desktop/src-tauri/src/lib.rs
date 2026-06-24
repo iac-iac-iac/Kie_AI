@@ -97,9 +97,16 @@ pub fn run() {
         .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_process::init())
         .setup(|app| {
-            if let Err(err) = sidecar::ensure_sidecar_started(app.handle()) {
-                eprintln!("sidecar start warning: {err}");
-            }
+            let handle = app.handle().clone();
+            tauri::async_runtime::spawn(async move {
+                let result = tauri::async_runtime::spawn_blocking(move || {
+                    sidecar::ensure_sidecar_started(&handle)
+                })
+                .await;
+                if let Ok(Err(err)) = result {
+                    eprintln!("sidecar start warning: {err}");
+                }
+            });
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
