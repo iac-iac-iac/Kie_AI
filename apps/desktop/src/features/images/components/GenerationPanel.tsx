@@ -153,7 +153,7 @@ export function GenerationPanel({
               {t("images.parameters")}
             </h3>
             <DynamicModelForm
-              key={formKey}
+              key={`${modelId}-${formKey}`}
               parameters={schemaQuery.data.parameters}
               initialValues={appliedDraft?.values}
               promptRef={promptRef}

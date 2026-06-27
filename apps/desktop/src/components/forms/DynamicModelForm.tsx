@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useMemo, useRef, useState, type RefObject } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
@@ -45,6 +45,23 @@ function defaultValue(param: ModelParameter): unknown {
   return "";
 }
 
+function buildInitialValues(
+  parameters: ModelParameter[],
+  initialValues?: Record<string, unknown>,
+): Record<string, unknown> {
+  const initial: Record<string, unknown> = {};
+  for (const param of parameters) {
+    initial[param.name] = defaultValue(param);
+  }
+  return { ...initial, ...initialValues };
+}
+
+function parametersSignature(parameters: ModelParameter[]): string {
+  return parameters
+    .map((p) => `${p.name}:${p.type}:${p.max_items ?? ""}:${p.required ?? false}`)
+    .join("|");
+}
+
 export function DynamicModelForm({
   parameters,
   onChange,
@@ -65,18 +82,25 @@ export function DynamicModelForm({
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const [activeUploadParam, setActiveUploadParam] = useState<string | null>(null);
+  const uploadTargetRef = useRef<ModelParameter | null>(null);
   const [singleUpload, setSingleUpload] = useState(false);
+  const initSignatureRef = useRef<string | null>(null);
+
+  const parametersKey = useMemo(() => parametersSignature(parameters), [parameters]);
+  const initialValuesKey = useMemo(
+    () => (initialValues ? JSON.stringify(initialValues) : ""),
+    [initialValues],
+  );
 
   useEffect(() => {
-    const initial: Record<string, unknown> = {};
-    for (const param of parameters) {
-      initial[param.name] = defaultValue(param);
-    }
-    const merged = { ...initial, ...initialValues };
+    const nextSignature = `${parametersKey}::${initialValuesKey}`;
+    if (initSignatureRef.current === nextSignature) return;
+
+    initSignatureRef.current = nextSignature;
+    const merged = buildInitialValues(parameters, initialValues);
     setValues(merged);
     onChange(merged);
-  }, [parameters, initialValues]);
+  }, [parameters, parametersKey, initialValues, initialValuesKey, onChange]);
 
   const update = (name: string, value: unknown) => {
     setValues((prev) => {
@@ -92,25 +116,36 @@ export function DynamicModelForm({
     setUploading(true);
     setUploadError(null);
     try {
-      const file = files[0];
-      const url = await api.uploadChatImage(file);
+      const maxItems = param.max_items ?? 2;
+      const uploaded: string[] = [];
+
+      for (const item of Array.from(files)) {
+        const url = await api.uploadChatImage(item);
+        if (!url?.trim()) {
+          throw new Error(t(`${uploadLabelsKey}.uploadError`));
+        }
+        uploaded.push(url.trim());
+        if (param.type === "image_url") break;
+        if (uploaded.length >= maxItems) break;
+      }
 
       if (param.type === "image_url") {
-        update(param.name, url);
+        update(param.name, uploaded[0] ?? "");
         return;
       }
 
-      const maxItems = param.max_items ?? 2;
-      const current = (values[param.name] as string[] | undefined) ?? [];
-      const remaining = maxItems - current.length;
-      if (remaining <= 0) return;
+      setValues((prev) => {
+        const current = (prev[param.name] as string[] | undefined) ?? [];
+        const remaining = maxItems - current.length;
+        if (remaining <= 0 || uploaded.length === 0) return prev;
 
-      const uploaded: string[] = [];
-      for (const item of Array.from(files).slice(0, remaining)) {
-        const itemUrl = item === file ? url : await api.uploadChatImage(item);
-        uploaded.push(itemUrl);
-      }
-      update(param.name, [...current, ...uploaded]);
+        const next = {
+          ...prev,
+          [param.name]: [...current, ...uploaded].slice(0, maxItems),
+        };
+        onChange(next);
+        return next;
+      });
     } catch (err) {
       const message =
         err instanceof ApiError
@@ -125,15 +160,19 @@ export function DynamicModelForm({
   };
 
   const removeImageUrl = (paramName: string, url: string) => {
-    const current = (values[paramName] as string[] | undefined) ?? [];
-    update(
-      paramName,
-      current.filter((item) => item !== url),
-    );
+    setValues((prev) => {
+      const current = (prev[paramName] as string[] | undefined) ?? [];
+      const next = {
+        ...prev,
+        [paramName]: current.filter((item) => item !== url),
+      };
+      onChange(next);
+      return next;
+    });
   };
 
   const openUpload = (param: ModelParameter, single: boolean) => {
-    setActiveUploadParam(param.name);
+    uploadTargetRef.current = param;
     setSingleUpload(single);
     fileInputRef.current?.click();
   };
@@ -147,10 +186,11 @@ export function DynamicModelForm({
         multiple={!singleUpload}
         className="hidden"
         onChange={(e) => {
-          const targetParam = parameters.find((p) => p.name === activeUploadParam);
+          const targetParam = uploadTargetRef.current;
           if (targetParam) {
             void handleImageUpload(targetParam, e.target.files);
           }
+          uploadTargetRef.current = null;
           e.target.value = "";
         }}
       />
@@ -235,6 +275,22 @@ export function DynamicModelForm({
                 onChange={(e) => update(param.name, e.target.value)}
                 placeholder={t(`${uploadLabelsKey}.urlPlaceholder`)}
               />
+              {String(values[param.name] ?? "").trim() && (
+                <div className="relative w-fit">
+                  <img
+                    src={String(values[param.name])}
+                    alt=""
+                    className="h-24 w-24 rounded-lg border border-[var(--glass-border)] object-cover"
+                  />
+                  <button
+                    type="button"
+                    className="absolute -right-2 -top-2 rounded-full bg-[var(--glass-bg)] px-2 py-0.5 text-xs text-status-error shadow"
+                    onClick={() => update(param.name, "")}
+                  >
+                    {t(`${uploadLabelsKey}.removeReference`)}
+                  </button>
+                </div>
+              )}
               <Button
                 type="button"
                 variant="outline"
@@ -255,12 +311,16 @@ export function DynamicModelForm({
                 {((values[param.name] as string[] | undefined) ?? []).map((url) => (
                   <div
                     key={url}
-                    className="flex items-center gap-2 rounded-lg border border-[var(--glass-border)] px-2 py-1 text-xs"
+                    className="relative"
                   >
-                    <span className="max-w-40 truncate">{url}</span>
+                    <img
+                      src={url}
+                      alt=""
+                      className="h-24 w-24 rounded-lg border border-[var(--glass-border)] object-cover"
+                    />
                     <button
                       type="button"
-                      className="text-status-error"
+                      className="absolute -right-2 -top-2 rounded-full bg-[var(--glass-bg)] px-2 py-0.5 text-xs text-status-error shadow"
                       onClick={() => removeImageUrl(param.name, url)}
                     >
                       {t(`${uploadLabelsKey}.removeReference`)}

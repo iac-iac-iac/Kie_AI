@@ -21,5 +21,6 @@ export function useModelSchema(modelId: string | null) {
     queryKey: ["model-schema", modelId],
     queryFn: () => api.getModelSchema(modelId!),
     enabled: !!modelId,
+    refetchOnWindowFocus: false,
   });
 }
